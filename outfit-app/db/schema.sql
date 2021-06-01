@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS outfit_db;
+CREATE DATABASE outfit_db;

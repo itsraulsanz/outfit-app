@@ -40,6 +40,10 @@ Outfits.init(
             allowNull: false,
             defaultValue: DataTypes.NOW,
         }, 
+        notes: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         image: {
             type: DataTypes.STRING,
             allowNull: false,

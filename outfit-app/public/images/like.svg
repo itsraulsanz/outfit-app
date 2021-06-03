@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="21" viewBox="0 0 21 21">
+  <defs>
+    <clipPath id="clip-like">
+      <rect width="21" height="21"/>
+    </clipPath>
+  </defs>
+  <g id="like" clip-path="url(#clip-like)">
+    <rect width="21" height="21" fill="#fff"/>
+    <g id="Group_87" data-name="Group 87" transform="translate(0.708 -3.418)">
+      <path id="Path_37" data-name="Path 37" d="M5.611,6.035A4.488,4.488,0,0,0,2.35,7.447a4.943,4.943,0,0,0,0,6.775L9.4,21.635a.538.538,0,0,0,.761.018l.018-.018q3.529-3.7,7.055-7.408a4.941,4.941,0,0,0,0-6.775,4.482,4.482,0,0,0-6.528,0l-.913.953-.913-.958A4.5,4.5,0,0,0,5.611,6.035Z" transform="translate(0)"/>
+    </g>
+  </g>
+</svg>

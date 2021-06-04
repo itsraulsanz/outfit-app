@@ -63,9 +63,9 @@ router.get("/outfits/:id", async (req, res) => {
 });
 
 
-// PROFILE - PREVENT ROUTE ACCESS USING WITHAUTH MIDDLEWARE
+// DASHBOARD - PREVENT ROUTE ACCESS USING WITHAUTH MIDDLEWARE
 
-router.get("/profile", withAuth, async (req, res) => {
+router.get("/dashboard", withAuth, async (req, res) => {
 
     // Find user logged_in data from session ID
     try {
@@ -81,11 +81,11 @@ router.get("/profile", withAuth, async (req, res) => {
             ],
         });
 
-        // serialises data specific to user into profile handlebars template
+        // serialises data specific to user into dashboard handlebars template
         const user = userData.get({ plain: true });
 
         // passes data for one outfit into single-outfit handlebars template
-        res.render('profile', {
+        res.render('dashboard', {
             ...user,
             logged_in: true
         });
@@ -95,11 +95,11 @@ router.get("/profile", withAuth, async (req, res) => {
 });
 
 
-// LOGIN - Redirects user to profile page if already logged_in
+// LOGIN - Redirects user to dashboard page if already logged_in
 router.get("/login", (req, res) => {
 
     if (req.session.logged_in) {
-        res.redirect("/profile");
+        res.redirect("/dashboard");
         return;
     }
     res.render("login");

@@ -1,11 +1,11 @@
 // HTML ROUTES
 
 const router = require("express").Router();
-const { Outfits, User, Likes } = require("../models");
+const { Outfits, User } = require("../models");
 const withAuth = require("../utils/auth"); 
 
 
-// DISPLAY OUTFITS ON HOMEPAGE
+// DISPLAY ALL OUTFITS ON HOMEPAGE
 
 router.get("/", async (req, res) => {
 

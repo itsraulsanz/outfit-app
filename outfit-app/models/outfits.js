@@ -11,6 +11,11 @@ Outfits.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        date_created: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW,
+        }, 
         outfit_name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -35,16 +40,15 @@ Outfits.init(
             type: DataTypes.STRING,
             allowNull: false,
         }, 
-        date_created: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.NOW,
-        }, 
         notes: {
             type: DataTypes.STRING,
             allowNull: false,
         },
         image: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        gender: {
             type: DataTypes.STRING,
             allowNull: false,
         },

@@ -8,18 +8,19 @@
 
   <body>
     <header>
-      <img
+      <a href="/"><img
         class="logo"
         src="/images/pose-it-logo.svg"
         alt="Post-it logo"
-      />
+      /></a>
+
       <nav>
         {{#if logged_in}}
           <a href="/dashboard">Dashboard</a>
           <button class="no-button" id="logout">Logout</button>
         {{else}}
-          <a href="/login">Sign Up</a>
-          <a href="/signup">Login</a>
+          <a href="/login">Login</a>
+          <a href="/signup">Sign Up</a>
         {{/if}}
       </nav>
     </header>
@@ -31,6 +32,6 @@
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
       <script src="/js/logout.js"></script>
-    {{/if}} --}} -->
+    {{/if}}
   </body>
 </html>

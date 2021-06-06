@@ -44,11 +44,11 @@ Outfits.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        image: {
+        gender: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        gender: {
+        image: {
             type: DataTypes.STRING,
             allowNull: false,
         },

@@ -101,10 +101,13 @@ router.get("/login", (req, res) => {
     res.render("login");
 })
 
+
 // SIGNUP - Redirects user to dashboard page if already logged_in
 router.get('/signup', async (req, res) => {
     res.render('signup');
 });
+
+
 
 // ADD OUTFIT - Render Get Outfit form once logged in
 

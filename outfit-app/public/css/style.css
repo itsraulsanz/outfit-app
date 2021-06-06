@@ -299,3 +299,11 @@ button {
   transition: color 0.1s;
   margin-left: 0px;
 }
+
+.new-outfit-form {
+  background: var(--light);
+  color: var(--primary);
+  border: var(--primary);
+  border-width: thick;
+
+}

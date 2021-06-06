@@ -110,5 +110,36 @@ router.get('/signup', async (req, res) => {
     res.render('signup');
 });
 
+// ADD OUTFIT - Render Get Outfit form once logged in
+
+router.get("/outfits", withAuth, async (req, res) => {
+
+    // Find user logged_in data from session ID
+    try {
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: 
+            { 
+                exclude: ["password"]
+            },
+           include: [
+                {
+                    model: Outfits,
+                },
+            ],
+        });
+
+        // serialises data specific to user into dashboard handlebars template
+        const user = userData.get({ plain: true });
+
+        // passes data for one outfit into single-outfit handlebars template
+        res.render('addoutfit', {
+            ...user,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 
 module.exports = router;

@@ -6,7 +6,8 @@ const withAuth = require("../../utils/auth");
 
 // POST NEW OUTFIT
 router.post('/addoutfit', withAuth, async (req, res) => {
-try {
+console.log(req, "request data")
+    try {
     const newOutfits = await Outfits.create({
         ...req.body,
         user_id: req.session.user_id,

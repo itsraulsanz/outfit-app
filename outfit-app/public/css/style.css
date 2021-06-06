@@ -70,7 +70,6 @@ nav {
 }
 
 nav a {
-  color: var(--light);
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;

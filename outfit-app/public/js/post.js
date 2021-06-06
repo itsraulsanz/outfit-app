@@ -14,7 +14,7 @@ async function createOutfitFormHandler(event) {
   if (outfitName && price && brand && location && occasion && colour && gender && image) {
     const response = await fetch("/api/outfits/addoutfit", {
       method: "POST",
-      body: JSON.stringify({ outfit_name, price, brand, location, occasion, colour, gender, image }),
+      body: JSON.stringify({ outfitName, price, brand, location, occasion, colour, gender, image }),
       headers: { "Content-Type": "application/json" },
     });
     console.log(response);

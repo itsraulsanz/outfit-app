@@ -67,27 +67,23 @@ router.get("/outfits/:id", async (req, res) => {
 
 router.get("/dashboard", withAuth, async (req, res) => {
 
-    // Find user logged_in data from session ID
     try {
-        const userData = await User.findByPk(req.session.user_id, {
-            attributes: 
-            { 
-                exclude: ["password"]
-            },
-           include: [
+        const outfitsData = await Outfits.findAll({
+            include: [
                 {
-                    model: Outfits,
+                    model: User,
+                    attributes: ['username']
                 },
             ],
         });
 
-        // serialises data specific to user into dashboard handlebars template
-        const user = userData.get({ plain: true });
+        // serialises outfits data for handlebars template
+        const outfits = outfitsData.map((outfit) => outfit.get({ plain: true }));
 
-        // passes data for one outfit into single-outfit handlebars template
+        // passes data into homepage handlebars template
         res.render('dashboard', {
-            ...user,
-            logged_in: true
+            outfits,
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);

@@ -4,7 +4,7 @@ const withAuth = require("../../utils/auth");
 
 
 // POST NEW OUTFIT
-router.post('/', withAuth, async (req, res) => {
+router.post('/addoutfit', async (req, res) => {
 try {
     const newOutfits = await Outfits.create({
         ...req.body,

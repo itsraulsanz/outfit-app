@@ -16,8 +16,10 @@
 
       <nav>
         {{#if logged_in}}
+           <a href="/addoutfit">Add Outfit</a>
           <a href="/dashboard">Dashboard</a>
           <button class="no-button" id="logout">Logout</button>
+      
         {{else}}
           <a href="/login">Login</a>
           <a href="/signup">Sign Up</a>

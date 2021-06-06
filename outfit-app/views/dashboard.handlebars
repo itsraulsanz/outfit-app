@@ -1,39 +1,50 @@
 <div class="wrapper">
-    <h2>{{name}}'s board</h2>        
-    <h3>Your outfits' list:</h3>
+  <div>
+  <button href="/addoutfit" class="btn btn-primary">Create a new Pose</button>  
+  </div>
+   <br>
+   
+      <h2>{{username}}'s board</h2>
+
+    <div>
+     <h3>Your favourite outfits:</h3>
+   </div>
+
 </div>
+ 
 
 <div class="grid">
-    {{#if outfits.length}}
-        {{#each outfits as |outfit|}}
-            <div class="content">
-                <section class="card">
-                <a href="/outfits/{{id}}">
-                <img
-                class="outfit-image"
-                src="/images/{{image}}"
-                alt="Outfit"
-            /></a>
-            <div class="card-body-simple">
-                <div>
+
+  {{#each outfits as |outfit|}}
+  <div class="content">
+    <section class="card">
+      <a href="/outfits/{{id}}">
+      <img
+        class="outfit-image"
+        src="/images/{{image}}"
+        alt="Outfit"
+      />
+      </a>
+      <div class="card-body-simple">
+        <div>
           <h1>{{outfit_name}}</h1>
-          <h2>{{gender}}</h2>
-          <h2>{{occasion}}</h2>
-                </div>
+          <h2>Posted on: {{ format_date date_created }}</h2>
+        </div>
         <div class="btn-no-style like">
           <button id="like" class="like"><img src="/images/like.svg"/></button>
         </div>
-                </div>
-                </section>
-            </div>
-          {{/each}}
-        </div>
-      {{/if}}
+      <div>
+         <button class="btn btn-delete" data-id="{{project.id}}">DEL</button> 
+      </div>
+    </section>
   </div>
+  {{/each}}
 </div>
-</div>
 
-<button><a href="/addoutfit" class="btn btn-primary">Create a new Pose</button>
+<script src="./js/dashboard.js"></script>
 
 
-<script src="./js/profile.js"></script>
+
+
+
+

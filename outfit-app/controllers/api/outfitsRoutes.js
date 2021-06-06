@@ -2,8 +2,6 @@ const router = require("express").Router();
 const { Outfits } = require("../../models");
 const withAuth = require("../../utils/auth"); 
 
-
-
 // POST NEW OUTFIT
 router.post('/addoutfit', withAuth, async (req, res) => {
 console.log(req, "request data")
@@ -19,9 +17,7 @@ console.log(req, "request data")
 }
 });
 
-
 // UPDATE AN OUTFIT BY ITS ID
-
 router.put("/:id", withAuth, async (req, res) => {
     try {
         const updateOutfit = await Outfits.update({
@@ -38,27 +34,21 @@ router.put("/:id", withAuth, async (req, res) => {
 
 
 // DELETE AN OUTFIT BY ITS ID
-router.delete("/:id", withAuth, async (req, res) => {
+router.delete("/:id", async (req, res) => {
     try {
         const outfitsData = await Outfits.destroy({
             where: {
                 id: req.params.id,
-                user_id: req.seesion.user_id,
             },
         });
-
+        res.status(200).json(outfitsData);
         if (!outfitsData) {
             res.status(404).json({ message: "No Outfit Found"})
         }
-
-        res.status(200).json(outfitsData);
-
     } catch (err) {
         res.status(500).json(err);
     }
 });
-
-
 
 module.exports = router;
 

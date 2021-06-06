@@ -1,28 +1,24 @@
-
 <div class="grid">
   {{#each outfits as |outfit|}}
-  <div class="content">
-    <section class="card">
-      <a href="/outfits/{{id}}">
-      <img
-        class="outfit-image"
-        src="/images/{{image}}"
-        alt="Outfit"
-      />
-      <div class="card-body-simple">
-        <div>
-          <h1>{{outfit_name}}</h1>
-          <h2>{{gender}}</h2>
-          <h2>{{occasion}}</h2>
-        </div>
-       
-        <div class="btn-no-style like">
-          <button id="like" class="like"><img src="/images/like.svg"/>  </button>
-        </div>
-  
-      </div>
-      </a>
-    </section>
-  </div>
+    <div class="content">
+      <section class="card">
+        <a href="/outfits/{{id}}">
+          <img class="outfit-image" src="/images/{{image}}" alt="Outfit" />
+          <div class="card-body-simple">
+            <div>
+              <h1>{{outfit_name}}</h1>
+              <h2>{{gender}}</h2>
+              <h2>{{occasion}}</h2>
+            </div>
+
+            <div class="btn-no-style like">
+              <button id="like" class="like"><img src="/images/like.svg" />
+              </button>
+            </div>
+
+          </div>
+        </a>
+      </section>
+    </div>
   {{/each}}
 </div>

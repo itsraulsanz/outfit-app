@@ -1,34 +1,45 @@
-<div class="grid">
-<div class="content">
-<section class="card">
-          <img
-            class="outfit-image"
-            src="/images/{{image}}"
-            alt="Outfit"
-          />
-          <div class="card-body">
-            <div class="outfit-nav">
-              <img src="/images/arrow_left.svg">
-              <h1>{{outfit_name}}</h1>
-              <img src="/images/arrow_right.svg">
-            </div>
-            <header>
-              <div>
-                <h3>{{notes}}</h3>
-              </div>
-              <div class="price">
-                <h2>{{price}}</h2>
-              </div>
-            </header>
-            <div class="details">
-              <p><span>Brand: </span>{{brand}}</p>
-              <p><span>Shop: </span>{{location}}</p>
-              <p><span>Gender: </span>{{gender}}</p>
-              <p><span>Occasion: </span>{{occasion}}</p>
-              <p><span>Colour: </span>{{colour}}</p>
-              <p><span>Post date: </span>{{date}}</p>
-            </div>
+<div class="single-outfit">
+  <div class="content">
+      <img class="outfit-image" src="/images/{{image}}" alt="Outfit" />
+    <section class="card">
+      <div class="card-body">
+        <div class="card-body-padding">
+        <div class="outfit-nav">
+          <h1>{{outfit_name}}</h1>
+        </div>
+        <header>
+          <div>
+            <h3>{{notes}}</h3>
           </div>
-        </section>
-</div>
-</div>
+          <div class="price">
+            <h2>{{price}}</h2>
+          </div>
+        </header>
+        <div class="details">
+          <p><span>Brand: </span>{{brand}}</p>
+          <p><span>Shop: </span>{{location}}</p>
+          <p><span>Gender: </span>{{gender}}</p>
+          <p><span>Occasion: </span>{{occasion}}</p>
+          <p><span>Colour: </span>{{colour}}</p>
+          <p><span>Post date: </span>{{date}}</p>
+        </div>
+      </div>
+      </div>
+    </section>
+    
+  </div>
+  
+</div>    
+{{#if logged_in}}
+<div class="wrapper">
+        <button
+          data-id="{{outfit.id}}"
+          class="btn btn-delete"
+          id="btn-delete"
+        >Delete the Outfit</button>
+        <a href="/editoutfit">Update the Outfit</a>
+
+      </div>
+{{/if}}
+
+<script src="/js/deleteOutfit.js"></script>

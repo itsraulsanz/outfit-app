@@ -119,12 +119,61 @@ button {
   margin-left: 0px;
 }
 
+.wrapper {
+  text-align: center;
+  align-content: center;
+}
+
+.wrapper a {
+  background: var(--primary) !important;
+  color: var(--light);
+  border: none !important;
+  padding: 10px !important;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 100%;
+  transition: color 0.1s;
+  margin-left: 0px;
+}
+
 .wrapper  h2{
   margin-top: 0;
 }
 
 .wrapper  h3{
   margin: 0;
+}
+
+/* .single-outfit {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+} */
+
+.single-outfit .content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  padding: 0px 20px 40px 20px;
+}
+
+.single-outfit img {
+  width: 60%;
+}
+
+.single-outfit .card-body {
+  height: 100%;
+  padding: 0;
+}
+
+.single-outfit .card-body-padding {
+  padding: 20px;
 }
 
 /* CARDS */

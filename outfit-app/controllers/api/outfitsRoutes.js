@@ -13,6 +13,7 @@ router.post("/", withAuth, async (req, res) => {
       occasion,
       colour,
       gender,
+      notes,
       image,
     } = req.body;
     const payload = Object.assign(
@@ -27,6 +28,7 @@ router.post("/", withAuth, async (req, res) => {
         occasion,
         colour,
         gender,
+        notes,
         image,
       }
     );

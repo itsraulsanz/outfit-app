@@ -1,12 +1,10 @@
 // HTML ROUTES
-
 const router = require("express").Router();
 const { Outfits, User } = require("../models");
 const withAuth = require("../utils/auth"); 
 
 
 // DISPLAY ALL OUTFITS ON HOMEPAGE
-
 router.get("/", async (req, res) => {
 
     // Get all outfits and join with User Data
@@ -108,9 +106,7 @@ router.get('/signup', async (req, res) => {
 });
 
 
-
 // ADD OUTFIT - Render Get Outfit form once logged in
-
 router.get("/outfits", withAuth, async (req, res) => {
 
     // Find user logged_in data from session ID
@@ -138,6 +134,11 @@ router.get("/outfits", withAuth, async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
+});
+
+// Update outfit - Redirects user to dashboard page if already logged_in
+router.get('/editoutfit', async (req, res) => {
+    res.render('editoutfit');
 });
 
 

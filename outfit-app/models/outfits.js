@@ -30,23 +30,24 @@ Outfits.init(
         }, 
         location: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         }, 
         occasion: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         }, 
         colour: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         }, 
         notes: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
+            defaultValue: '',
         },
         gender: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         image: {
             type: DataTypes.STRING,

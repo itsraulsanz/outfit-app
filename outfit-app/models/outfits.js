@@ -18,7 +18,7 @@ Outfits.init(
         }, 
         outfit_name: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         }, 
         price: {
             type: DataTypes.FLOAT,
@@ -30,23 +30,24 @@ Outfits.init(
         }, 
         location: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         }, 
         occasion: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         }, 
         colour: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         }, 
-        notes: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
         gender: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
+        },
+        notes: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: DataTypes.STRING,
         },
         image: {
             type: DataTypes.STRING,

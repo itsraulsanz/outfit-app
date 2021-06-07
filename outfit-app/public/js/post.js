@@ -8,6 +8,7 @@ async function createOutfitFormHandler(event) {
   const occasion = document.querySelector("#occasion").value.trim();
   const colour = document.querySelector("#colour").value.trim();
   const gender = document.querySelector("#gender").value.trim();
+  const notes = document.querySelector("#notes").value.trim();
   // TODO : implement actual file uplaod feature
   const image = document.querySelector("#image").files[0].name;
   console.log(image);
@@ -20,6 +21,7 @@ async function createOutfitFormHandler(event) {
     occasion &&
     colour &&
     gender &&
+    notes &&
     image
   ) {
     const response = await fetch("/api/outfits/", {
@@ -32,6 +34,7 @@ async function createOutfitFormHandler(event) {
         occasion,
         colour,
         gender,
+        notes,
         image,
       }),
       headers: { "Content-Type": "application/json" },

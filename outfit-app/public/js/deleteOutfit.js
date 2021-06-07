@@ -5,8 +5,7 @@ const deletePostHandler = async (event) => {
     window.location.toString().split("/").length - 1
   ];
   const response = await fetch(`/api/outfits/${id}`, {
-    method: "DELETE",
-    headers: { "Content-Type:": "application/json" },
+    method: 'DELETE',
   });
   if (response.ok) {
     document.location.replace("/dashboard");

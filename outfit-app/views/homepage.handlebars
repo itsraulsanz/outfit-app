@@ -1,3 +1,9 @@
+<label for="sort-outfits">Sort by: </label>
+<select name="sort-outfits" id="sort-outfits">
+  <option value="bypricehigh">Price high to low</option>
+  <option value="bypricelow">Price low to hight</option>
+</select>
+
 <div class="grid">
   {{#each outfits as |outfit|}}
     <div class="content">
@@ -23,3 +29,5 @@
     </div>
   {{/each}}
 </div>
+
+<script src="/js/homepage.js"></script>

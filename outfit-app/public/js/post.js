@@ -8,24 +8,43 @@ async function createOutfitFormHandler(event) {
   const occasion = document.querySelector("#occasion").value.trim();
   const colour = document.querySelector("#colour").value.trim();
   const gender = document.querySelector("#gender").value.trim();
-  const image = document.querySelector("#image").value.trim();
+  // TODO : implement actual file uplaod feature
+  const image = document.querySelector("#image").files[0].name;
+  console.log(image);
 
-
-  if (outfitName && price && brand && location && occasion && colour && gender && image) {
-    const response = await fetch("/api/outfits/addoutfit", {
+  if (
+    outfitName &&
+    price &&
+    brand &&
+    location &&
+    occasion &&
+    colour &&
+    gender &&
+    image
+  ) {
+    const response = await fetch("/api/outfits/", {
       method: "POST",
-      body: JSON.stringify({ outfitName, price, brand, location, occasion, colour, gender, image }),
+      body: JSON.stringify({
+        outfitName,
+        price,
+        brand,
+        location,
+        occasion,
+        colour,
+        gender,
+        image,
+      }),
       headers: { "Content-Type": "application/json" },
     });
-    console.log(response);
     if (response.ok) {
       document.location.replace("/dashboard");
     } else {
+      console.log(response);
       alert(response.statusText, "Failed to upload outfit");
     }
   }
-};
+}
 
 document
-.querySelector(".new-outfit-form")
-.addEventListener("submit", createOutfitFormHandler);
+  .querySelector(".new-outfit-form")
+  .addEventListener("submit", createOutfitFormHandler);

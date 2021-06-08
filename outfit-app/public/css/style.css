@@ -92,6 +92,31 @@ nav a:hover {
   margin: 30px 0 15px 0;
 }
 
+select {
+  padding: 8px;
+  margin: 0px 4px 0px 4px;
+}
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+select option { color: black; }
+select option:first-child{
+  color: green;
+}
+
+select option[value="1"] {
+  background: rgba(100, 100, 100, 0.3);
+}
+
+.divider {
+  border-bottom: solid black 1px;
+}
+
 .outfit-image {
   width: 100%;
 }
@@ -178,6 +203,7 @@ button {
 
 /* CARDS */
 .card {
+  max-width: 25vw;
   min-width: 18vw;
   flex: 0 1 300px;
   background-color: var(--light);
@@ -336,7 +362,6 @@ button {
   display: none;
 }
 
-
 .btn-delete {
   background: var(--error) !important;
   color: var(--light);
@@ -354,19 +379,16 @@ button {
   color: var(--primary);
   border: var(--primary);
   border-width: thick;
-
 }
 
 input[type="checkbox"]{
   height: 20px;
   width: 20px;
- 
   background-color: silver;
   position: relative;
   outline: none;
   transform: rotate(45deg);
   -webkit-appearance:none;
-
 }
 
 input[type="checkbox"]:before{
@@ -378,11 +400,9 @@ input[type="checkbox"]:before{
   width: 100%;
   top:-59%;
   border-radius: 75px 75px 0 0;
-
 }
 
 input[type="checkbox"]:after{
-
   position: absolute;
   content: "";
   background-color:silver;
@@ -399,4 +419,18 @@ input:checked[type="checkbox"]:before,
 input:checked[type="checkbox"]:after
 {
   background-color: #fe0f42;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .card {
+  	max-width: 25vw;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {  
+  .card {
+  	min-width: none;
+  }
 }

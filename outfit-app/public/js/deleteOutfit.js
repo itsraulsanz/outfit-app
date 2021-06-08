@@ -10,7 +10,7 @@ const deletePostHandler = async (event) => {
   if (response.ok) {
     document.location.replace("/dashboard");
   } else {
-    alert("Could not delete post");
+    alert("Could not delete the Outfit");
   }
 };
 

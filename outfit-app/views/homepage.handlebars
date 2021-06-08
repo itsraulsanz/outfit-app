@@ -1,8 +1,49 @@
-<label for="sort-outfits">Sort by: </label>
-<select name="sort-outfits" id="sort-outfits">
-  <option value="bypricehigh">Price high to low</option>
-  <option value="bypricelow">Price low to hight</option>
-</select>
+<div class="selectors">
+
+  <select name="sort-by-price" data-filter="price">
+    <option selected disabled>Price</option>
+    <option value="bypricehigh">Price high to low</option>
+    <option value="bypricelow">Price low to hight</option>
+  </select>
+
+  <select name="select-gender" data-filter="gender">
+    <option selected disabled>Gender</option>
+    <option value="women">Women</option>
+    <option value="men">Men</option>
+    <option value="unisex">Unisex</option>
+  </select>
+
+  <select name="select-event" data-filter="event">
+    <option selected disabled>Event</option>
+    <option value="workwear">Workwear</option>
+    <option value="wedding">Wedding</option>
+    <option value="casual">Casual</option>
+    <option value="nightout">Night Out</option>
+    <option value="sportwear">Sportwear</option>
+    <option value="swimwear">Swimwear</option>
+    <option value="other">Other</option>
+  </select>
+
+  <select name="select-colour" data-filter="colour">
+    <option selected disabled>Colour</option>
+    <option value="black">Black</option>
+    <option value="blue">Blue</option>
+    <option value="brown">Brown</option>
+    <option value="gold">Gold</option>
+    <option value="green">Green</option>
+    <option value="grey">Grey</option>
+    <option value="multi">Multi</option>
+    <option value="navy">Navy</option>
+    <option value="neutral">Neutral</option>
+    <option value="nocolour">No Colour</option>
+    <option value="orange">Orange</option>
+    <option value="pink">Pink</option>
+    <option value="purple">Purple</option>
+    <option value="red">Red</option>
+    <option value="white">White</option>
+    <option value="yellow">Yellow</option>
+  </select>
+</div>
 
 <div class="grid">
   {{#each outfits as |outfit|}}

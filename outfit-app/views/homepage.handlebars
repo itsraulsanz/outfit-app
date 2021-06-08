@@ -1,8 +1,54 @@
-<label for="sort-outfits">Sort by: </label>
-<select name="sort-outfits" id="sort-outfits">
-  <option value="bypricehigh">Price high to low</option>
-  <option value="bypricelow">Price low to hight</option>
-</select>
+<div class="selectors">
+  
+  {{!-- <label for="sort-outfits">Sort by: </label> --}}
+  <select name="sort-by-price" id="sort-by-price">
+    <option selected>Price</option>
+    <li class="divider"></li>
+    <option value="bypricehigh">Price high to low</option>
+    <option value="bypricelow">Price low to hight</option>
+  </select>
+
+  {{! <label for="select-gender">Select gender: </label> }}
+  <select name="select-gender" id="select-gender">
+    <option selected>Gender</option>
+    <option value="women">Women</option>
+    <option value="men">Men</option>
+    <option value="unisex">Unisex</option>
+  </select>
+
+  {{! <label for="select-event">Event: </label> }}
+  <select name="select-event" id="select-event">
+    <option selected>Event</option>
+    <option value="workwear">Workwear</option>
+    <option value="wedding">Wedding</option>
+    <option value="casual">Casual</option>
+    <option value="nightout">Night Out</option>
+    <option value="sportwear">Sportwear</option>
+    <option value="swimwear">Swimwear</option>
+    <option value="other">Other</option>
+  </select>
+
+  {{! <label for="select-event">Colour: </label> }}
+  <select name="select-colour" id="select-colour">
+    <option selected>Colour</option>
+    <option value="black">Black</option>
+    <option value="blue">Blue</option>
+    <option value="brown">Brown</option>
+    <option value="gold">Gold</option>
+    <option value="green">Green</option>
+    <option value="grey">Grey</option>
+    <option value="multi">Multi</option>
+    <option value="navy">Navy</option>
+    <option value="neutral">Neutral</option>
+    <option value="nocolour">No Colour</option>
+    <option value="orange">Orange</option>
+    <option value="pink">Pink</option>
+    <option value="purple">Purple</option>
+    <option value="red">Red</option>
+    <option value="white">White</option>
+    <option value="yellow">Yellow</option>
+  </select>
+</div>
 
 <div class="grid">
   {{#each outfits as |outfit|}}
@@ -19,7 +65,12 @@
 
             <div class="btn-no-style like">
               <button id="like" class="like">
-                <input type="image" src="/images/unlike.svg" onMouseOver="this.src='/images/like.svg'" onMouseOut="this.src='/images/unlike.svg'">
+                <input
+                  type="image"
+                  src="/images/unlike.svg"
+                  onMouseOver="this.src='/images/like.svg'"
+                  onMouseOut="this.src='/images/unlike.svg'"
+                />
               </button>
             </div>
 

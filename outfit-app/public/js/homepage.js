@@ -8,4 +8,4 @@ const sortOutfitsHandler = async (event) => {
   console.log(outfitsData);
 }
 
-document.querySelector('#sort-outfits').addEventListener('change', sortOutfitsHandler);
+document.querySelector('#sort-by-price').addEventListener('change', sortOutfitsHandler);

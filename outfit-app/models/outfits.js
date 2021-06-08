@@ -15,7 +15,7 @@ Outfits.init(
             type: DataTypes.DATE,
             allowNull: false,
             defaultValue: DataTypes.NOW,
-        }, 
+        },
         outfit_name: {
             type: DataTypes.STRING,
             allowNull: true,
@@ -52,6 +52,11 @@ Outfits.init(
         image: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        likes: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false,
         },
         user_id: {
             type: DataTypes.INTEGER,

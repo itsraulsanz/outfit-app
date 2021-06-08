@@ -59,14 +59,8 @@
             </div>
 
             <div class="btn-no-style like">
-              <button id="like" class="like" type="click">
-                <input
-                  type="image"
-                  data-id="{{likes.id}}"
-                  src="/images/unlike.svg"
-                  onMouseOver="this.src='/images/like.svg'"
-                  onMouseOut="this.src='/images/unlike.svg'"
-                />
+              <button  class="like" type="submit">
+                <input type="checkbox" id="like" value="false" src="/images/unlike.svg" onMouseOver="this.src='/images/like.svg'" onMouseOut="this.src='/images/unlike.svg'">
               </button>
             </div>
 
@@ -78,3 +72,4 @@
 </div>
 
 <script src="/js/homepage.js"></script>
+<script src="js/likes.js"></script>

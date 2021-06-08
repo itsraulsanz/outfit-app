@@ -6,6 +6,7 @@ const withAuth = require("../../utils/auth");
 router.post("/", withAuth, async (req, res) => {
   try {
     const {
+      likes,
       outfitName,
       price,
       brand,
@@ -21,6 +22,7 @@ router.post("/", withAuth, async (req, res) => {
         user_id: req.session.user_id,
       },
       {
+        likes,
         outfit_name: outfitName,
         price,
         brand,
@@ -44,12 +46,39 @@ router.post("/", withAuth, async (req, res) => {
 // UPDATE AN OUTFIT BY ITS ID
 router.put("/:id", withAuth, async (req, res) => {
   try {
-    const updateOutfit = await Outfits.update({
-      ...req.body,
-      user_id: req.session.user_id,
-    });
+    const {
+      likes,
+      outfitName,
+      price,
+      brand,
+      location,
+      occasion,
+      colour,
+      gender,
+      notes,
+      image,
+    } = req.body;
 
-    res.status(200).json(updateOutfit);
+    const payload = Object.assign(
+      {
+        user_id: req.session.user_id,
+      },
+      {
+        likes,
+        outfit_name: outfitName,
+        price,
+        brand,
+        location,
+        occasion,
+        colour,
+        gender,
+        notes,
+        image,
+      }
+    );
+    const editOutfits = await Outfits.update(payload);
+
+    res.status(200).json(editOutfits);
   } catch (err) {
     res.status(400).json(err);
   }

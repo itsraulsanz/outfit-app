@@ -1,24 +1,20 @@
 <div class="selectors">
-  
-  {{!-- <label for="sort-outfits">Sort by: </label> --}}
-  <select name="sort-by-price" id="sort-by-price">
-    <option selected>Price</option>
-    <li class="divider"></li>
+
+  <select name="sort-by-price" data-filter="price">
+    <option selected disabled>Price</option>
     <option value="bypricehigh">Price high to low</option>
     <option value="bypricelow">Price low to hight</option>
   </select>
 
-  {{! <label for="select-gender">Select gender: </label> }}
-  <select name="select-gender" id="select-gender">
-    <option selected>Gender</option>
+  <select name="select-gender" data-filter="gender">
+    <option selected disabled>Gender</option>
     <option value="women">Women</option>
     <option value="men">Men</option>
     <option value="unisex">Unisex</option>
   </select>
 
-  {{! <label for="select-event">Event: </label> }}
-  <select name="select-event" id="select-event">
-    <option selected>Event</option>
+  <select name="select-event" data-filter="event">
+    <option selected disabled>Event</option>
     <option value="workwear">Workwear</option>
     <option value="wedding">Wedding</option>
     <option value="casual">Casual</option>
@@ -28,9 +24,8 @@
     <option value="other">Other</option>
   </select>
 
-  {{! <label for="select-event">Colour: </label> }}
-  <select name="select-colour" id="select-colour">
-    <option selected>Colour</option>
+  <select name="select-colour" data-filter="colour">
+    <option selected disabled>Colour</option>
     <option value="black">Black</option>
     <option value="blue">Blue</option>
     <option value="brown">Brown</option>
@@ -65,7 +60,13 @@
 
             <div class="btn-no-style like">
               <button id="like" class="like" type="click">
-                <input type="image" data-id="{{likes.id}}" src="/images/unlike.svg" onMouseOver="this.src='/images/like.svg'" onMouseOut="this.src='/images/unlike.svg'">
+                <input
+                  type="image"
+                  data-id="{{likes.id}}"
+                  src="/images/unlike.svg"
+                  onMouseOver="this.src='/images/like.svg'"
+                  onMouseOut="this.src='/images/unlike.svg'"
+                />
               </button>
             </div>
 

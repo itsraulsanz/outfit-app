@@ -30,9 +30,13 @@
           <h1>{{outfit_name}}</h1>
           <h2>Posted on: {{ format_date date_created }}</h2>
         </div>
-        <div class="btn-no-style like">
-          <button id="like" class="like"><img src="/images/like.svg"/></button>
-        </div>
+      
+            <div class="btn-no-style like">
+              <button  class="like" type="submit">
+                <input type="checkbox" id="like" value="true" src="/images/unlike.svg" onMouseOver="this.src='/images/like.svg'" onMouseOut="this.src='/images/unlike.svg'">
+              </button>
+            </div>
+
     </section>
   </div>
   {{/each}}

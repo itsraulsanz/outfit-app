@@ -64,13 +64,8 @@
             </div>
 
             <div class="btn-no-style like">
-              <button id="like" class="like">
-                <input
-                  type="image"
-                  src="/images/unlike.svg"
-                  onMouseOver="this.src='/images/like.svg'"
-                  onMouseOut="this.src='/images/unlike.svg'"
-                />
+              <button id="like" class="like" type="click">
+                <input type="image" data-id="{{likes.id}}" src="/images/unlike.svg" onMouseOver="this.src='/images/like.svg'" onMouseOut="this.src='/images/unlike.svg'">
               </button>
             </div>
 

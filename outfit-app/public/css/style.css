@@ -203,6 +203,7 @@ button {
 
 /* CARDS */
 .card {
+  max-width: 25vw;
   min-width: 18vw;
   flex: 0 1 300px;
   background-color: var(--light);
@@ -379,5 +380,18 @@ button {
   color: var(--primary);
   border: var(--primary);
   border-width: thick;
+}
 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .card {
+  	max-width: 25vw;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {  
+  .card {
+  	min-width: none;
+  }
 }

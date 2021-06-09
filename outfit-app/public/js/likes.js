@@ -13,6 +13,7 @@ async function likesChecker(event) {
     }),
     headers: { "Content-Type": "application/json" },
   });
+  console.log(response, "likes");
 
   if (response.ok) {
     document.location.replace(`/outfits/${id}`);

@@ -23,7 +23,7 @@ async function editPostFormHandler(event) {
     notes &&
     image
   ) {
-    const response = await fetch('/api/outfits/${id}', {
+    const response = await fetch("/api/outfits/${id}", {
       method: "PUT",
       body: JSON.stringify({
         outfitName,
@@ -50,8 +50,6 @@ async function editPostFormHandler(event) {
 document
   .querySelector(".edit-outfit-form")
   .addEventListener("submit", editPostFormHandler);
-
-
   const imageNode =  document.querySelector("#image");
 
   const uploadFile = () => {
@@ -71,4 +69,4 @@ document
   }
   
   imageNode.addEventListener("change", uploadFile, false);
-  
+ 

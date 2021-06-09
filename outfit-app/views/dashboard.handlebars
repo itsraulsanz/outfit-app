@@ -3,45 +3,50 @@
     <a href="/outfits">Create a new Outfit</a>
   </div>
    <br>
-   
-      <h2>{{username}}'s board</h2>
-
+   {{#if logged_in}}
+      <h2>{{user.username}}'s board</h2>      
+  
+  {{/if}}
     <div>
      <h3>Your favourite or posted outfits:</h3>
    </div>
+  <br />
+  <div>
+    <h3>Your favourite or posted outfits:</h3>
+  </div>
 
 </div>
- 
 
 <div class="grid">
 
   {{#each outfits as |outfit|}}
-  <div class="content">
-    <section class="card">
-      <a href="/outfits/{{id}}">
-      <img
-        class="outfit-image"
-        src="{{image}}"
-        alt="Outfit"
-      />
-      </a>
-      <div class="card-body-simple">
-        <div>
-          <h1>{{outfit_name}}</h1>
-          <h2>Posted on: {{ format_date date_created }}</h2>
+    <div class="content">
+      <section class="card">
+        <a href="/outfits/{{id}}">
+          <img class="outfit-image" src="{{image}}" alt="Outfit" />
+        </a>
+        <div class="card-body-simple">
+          <div>
+            <h1>{{outfit_name}}</h1>
+            <h2>Posted on: {{format_date date_created}}</h2>
+          </div>
+
+          <div class="btn-no-style like">
+            <button class="like" type="submit">
+              <input
+                type="checkbox"
+                id="like"
+                value="true"
+                src="/images/unlike.svg"
+                onMouseOver="this.src='/images/like.svg'"
+                onMouseOut="this.src='/images/unlike.svg'"
+              />
+            </button>
+          </div>
         </div>
-        <div class="btn-no-style like">
-          <button id="like" class="like"><img src="/images/like.svg"/></button>
-        </div>
-    </section>
-  </div>
+      </section>
+    </div>
   {{/each}}
 </div>
 
 <script src="./js/dashboard.js"></script>
-
-
-
-
-
-

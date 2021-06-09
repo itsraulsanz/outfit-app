@@ -2,26 +2,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pose-it</title>       
+    <title>Pose-it</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    {{!-- <link rel="stylesheet" href="/netdna.bootstrapcdn.com/bootstrap/5.0/css/bootstrap.min.css"> --}}
+    {{! <link rel="stylesheet" href="/netdna.bootstrapcdn.com/bootstrap/5.0/css/bootstrap.min.css"> }}
 
   </head>
 
   <body>
     <header>
       <a href="/"><img
-        class="logo"
-        src="/images/pose-it-logo.svg"
-        alt="Post-it logo"
-      /></a>
+          class="logo"
+          src="/images/pose-it-logo.svg"
+          alt="Post-it logo"
+        /></a>
 
       <nav>
         {{#if logged_in}}
           <a href="/outfits">Add Outfit</a>
           <a href="/dashboard">Dashboard</a>
           <button class="no-button" id="logout">Logout</button>
-      
+
         {{else}}
           <a href="/login">Login</a>
           <a href="/signup">Sign Up</a>
@@ -30,7 +30,7 @@
     </header>
 
     <main>
-      {{{ body }}}
+      {{{body}}}
     </main>
 
     <!-- Render script for logged in users only -->

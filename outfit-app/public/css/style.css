@@ -1,10 +1,8 @@
 :root {
   --primary: #000;
-  --secondary: #d9e7d1;
-  --tertiary: #5e877f;
-  --quatrinary: #887d52;
+  --secondary: #c5839e;
+  --tertiary: #d3d3d3;
   --light: #ffffff;
-  --dark: rgb(41, 38, 21);
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
 }
@@ -47,8 +45,8 @@ header a {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-	align-items: stretch;
-	align-content: stretch;
+  align-items: stretch;
+  align-content: stretch;
   flex-grow: 1;
   padding: 50px 80px 50px 80px;
 }
@@ -104,8 +102,10 @@ select option {
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
 
-select option { color: black; }
-select option:first-child{
+select option {
+  color: black;
+}
+select option:first-child {
   color: green;
 }
 
@@ -124,12 +124,6 @@ select option[value="1"] {
 button {
   background: none !important;
   border: none !important;
-  padding: 0 !important;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 100%;
-  transition: color 0.1s;
-  margin-left: 16px;
 }
 
 .btn-primary {
@@ -165,11 +159,11 @@ button {
   margin-left: 0px;
 }
 
-.wrapper h2{
+.wrapper h2 {
   margin-top: 0;
 }
 
-.wrapper h3{
+.wrapper h3 {
   margin: 0;
 }
 
@@ -213,9 +207,17 @@ button {
   background-color: var(--light);
 }
 
+.card:hover {
+  transition: transform .2s;  
+  color: var(--light);
+  background-color: var(--primary);
+  border: 1px solid var(--light);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .card-body {
   padding: 20px;
-  text-align: left;  
+  text-align: left;
   border: solid 1px var(--primary);
 }
 
@@ -240,7 +242,7 @@ button {
 .card-body h3 {
   margin: 0;
   margin-bottom: 5px;
-  text-align: left; 
+  text-align: left;
   font-weight: 100;
   font-size: 1.1rem;
 }
@@ -275,16 +277,15 @@ button {
   padding-bottom: 10px;
 }
 
-
 .card-body-simple {
   padding: 20px;
-  text-align: left;  
+  text-align: left;
   border: solid 1px var(--primary);
   display: flex;
   justify-content: space-between;
 }
 
-.card-body-simple h1{
+.card-body-simple h1 {
   margin: 0;
   margin-bottom: 4px;
   text-align: left;
@@ -301,7 +302,7 @@ button {
 .card-body-simple h3 {
   margin: 0;
   margin-bottom: 5px;
-  text-align: left; 
+  text-align: left;
   font-weight: 100;
   font-size: 1.1rem;
 }
@@ -385,76 +386,71 @@ button {
   border-width: thick;
 }
 
-input[type="checkbox"]{
-  height: 20px;
-  width: 20px;
-  background-color: silver;
-  position: relative;
-  outline: none;
+input[type="checkbox"] {
+  height: 16px;
+  width: 16px;
+  background-color: var(--tertiary);
   transform: rotate(45deg);
-  -webkit-appearance:none;
+  -webkit-appearance: none;
 }
 
-input[type="checkbox"]:before{
+input[type="checkbox"]:before {
   position: absolute;
   content: "";
-  background-color:silver;
-  border-color:silver;
+  background-color: var(--tertiary);
+  border-color: var(--tertiary);
   height: 60%;
   width: 100%;
-  top:-59%;
+  top: -56%;
   border-radius: 75px 75px 0 0;
 }
 
-input[type="checkbox"]:after{
+input[type="checkbox"]:after {
   position: absolute;
   content: "";
-  background-color:silver;
+  background-color: var(--tertiary);
   height: 60%;
   width: 100%;
   transform: rotate(-90deg);
   border-radius: 75px 75px 0 0;
-  top:20%;
-  right: 79%;
+  top: 20%;
+  right: 76%;
 }
 
-input[type="checkbox"]:checked, 
+input[type="checkbox"]:checked,
 input:checked[type="checkbox"]:before,
-input:checked[type="checkbox"]:after
-{
-  background-color: #fe0f42;
+input:checked[type="checkbox"]:after {
+  background-color: var(--secondary);
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .card {
-  	max-width: 25vw;
+    max-width: 25vw;
   }
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {  
+@media (max-width: 576px) {
   .card {
-  	min-width: none;
+    min-width: none;
+  }
+
+  .card-body-simple {
+    flex-direction: column;
   }
 }
 
-
 .new-outfit-section {
-  border-radius: 20px;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 0;
-  background-color: lightgrey;
-  padding: 40px;
-  padding-top: 5px;
-
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 70px;
+    padding-top: 0;
 }
 
 .form-group {
   padding: 5px;
 }
-
 
 .form-input {
   width: 100%;
@@ -465,5 +461,3 @@ input:checked[type="checkbox"]:after
   border-radius: 4px;
   box-sizing: border-box;
 }
-
-

@@ -4,12 +4,15 @@ const session = require("express-session");
 const exphbs = require("express-handlebars");
 const fileUpload = require("express-fileupload");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
+const helmet = require("helmet");
 
 const routes = require("./controllers");
 const sequelize = require("./config/connection");
 const helpers = require("./utils/helpers");
 
 const app = express();
+
+
 const PORT = process.env.PORT || 3001;
 
 const sess = {
@@ -23,6 +26,8 @@ const sess = {
 };
 
 app.use(session(sess));
+app.use(helmet());
+
 
 const hbs = exphbs.create({ helpers });
 

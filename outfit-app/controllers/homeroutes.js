@@ -22,8 +22,7 @@ router.get("/", async (req, res) => {
     // passes data into homepage handlebars template
     if (req.query.price) {
       const sortedOutfits = outfits.sort(
-        (firstOutfit, secondOutfit) => firstOutfit.price > secondOutfit.price
-      );
+        (firstOutfit, secondOutfit) => firstOutfit.price - secondOutfit.price);
       console.log("sortedOutfits", sortedOutfits);
       res.render("homepage", {
         outfits: sortedOutfits,
@@ -32,31 +31,33 @@ router.get("/", async (req, res) => {
     }
     if (req.query.gender) {
       const filteredOutfits = outfits.filter(
-        (outfit) => outfit.gender.toLowerCase() === req.query.gender
+        (outfit) =>
+          outfit.gender.toLowerCase() === req.query.gender &&
+          outfit.event.toLowerCase() === req.query.event
       );
       console.log("filteredOutfits", filteredOutfits);
       res.render("homepage", {
         outfits: filteredOutfits,
         logged_in: req.session.logged_in,
       });
-    // }
-    // if (req.query.event) {
-    //   const filteredOutfits = outfits.filter(
-    //     (outfit) => outfit.event.toLowerCase() === req.query.event
-    //   );
-    //   res.render("homepage", {
-    //     outfits: filteredOutfits,
-    //     logged_in: req.session.logged_in,
-    //   });
-    // }
-    // if (req.query.colour) {
-    //   const filteredOutfits = outfits.filter(
-    //     (outfit) => outfit.colour.toLowerCase() === req.query.colour
-    //   );
-    //   res.render("homepage", {
-    //     outfits: filteredOutfits,
-    //     logged_in: req.session.logged_in,
-    //   });
+      // }
+      // if (req.query.event) {
+      //   const filteredOutfits = outfits.filter(
+      //     (outfit) => outfit.event.toLowerCase() === req.query.event
+      //   );
+      //   res.render("homepage", {
+      //     outfits: filteredOutfits,
+      //     logged_in: req.session.logged_in,
+      //   });
+      // }
+      // if (req.query.colour) {
+      //   const filteredOutfits = outfits.filter(
+      //     (outfit) => outfit.colour.toLowerCase() === req.query.colour
+      //   );
+      //   res.render("homepage", {
+      //     outfits: filteredOutfits,
+      //     logged_in: req.session.logged_in,
+      //   });
     } else {
       res.render("homepage", {
         outfits,
@@ -95,39 +96,35 @@ router.get("/outfits/:id", async (req, res) => {
   }
 });
 
-
-
 // DASHBOARD - PREVENT ROUTE ACCESS USING WITHAUTH MIDDLEWARE
 
 router.get("/dashboard", withAuth, async (req, res) => {
-
   try {
-      const outfitsData = await Outfits.findAll({
-          include: [
-              {
-                  model: User,
-                  attributes: ['username']
-              },
-          ],
-      });
+    const outfitsData = await Outfits.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ["username"],
+        },
+      ],
+    });
 
-      // serialises outfits data for handlebars template
-      const outfits = outfitsData.map((outfit) => outfit.get({ plain: true }));
+    // serialises outfits data for handlebars template
+    const outfits = outfitsData.map((outfit) => outfit.get({ plain: true }));
 
-      // passes data into homepage handlebars template
-      res.render('dashboard', {
-          outfits,
-          logged_in: req.session.logged_in
-      });
+    // passes data into homepage handlebars template
+    res.render("dashboard", {
+      outfits,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
-      res.status(500).json(err);
+    res.status(500).json(err);
   }
 });
 
-
-//   // FILTER ON DASHBOARD BY 'LIKES' ONLY 
+//   // FILTER ON DASHBOARD BY 'LIKES' ONLY
 // router.get("/dashboard", withAuth, async (req, res) => {
- 
+
 //   try {
 //     const outfitsData = await Outfits.findByPk(req.params.id, {
 //       include: [
@@ -140,7 +137,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
 //     // serialises outfits data for handlebars template
 //     const outfits = outfitsData.map((outfit) => outfit.get({ plain: true }));
 //     // passes data into dashboard handlebars template
-    
+
 //     if (req.params.likes) {
 //       const filteredLikes = outfits.filter(
 //         (outfit) => outfit.likes.toLowerCase() === req.params.likes
@@ -159,8 +156,6 @@ router.get("/dashboard", withAuth, async (req, res) => {
 //   }
 
 // });
-
-
 
 // LOGIN - Redirects user to dashboard page if already logged_in
 router.get("/login", (req, res) => {

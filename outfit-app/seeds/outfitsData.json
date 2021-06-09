@@ -25,7 +25,7 @@
   },
   {
     "outfit_name": "Shirt",
-    "price": 34.90,
+    "price": 34.9,
     "brand": "Zara",
     "location": "Zara",
     "occasion": "Casual",
@@ -85,7 +85,7 @@
   },
   {
     "outfit_name": "Wide Trousers",
-    "price": 40.00,
+    "price": 40.0,
     "brand": "Mango",
     "location": "Mango",
     "occasion": "Casual",
@@ -109,7 +109,7 @@
   },
   {
     "outfit_name": "Leather Trousers",
-    "price": 50.60,
+    "price": 50.6,
     "brand": "Monky",
     "location": "Monky",
     "occasion": "Night Out",
@@ -118,10 +118,10 @@
     "image": "outfit10.jpg",
     "gender": "Women",
     "user_id": 2
-  }, 
+  },
   {
     "outfit_name": "Print Dress",
-    "price": 40.00,
+    "price": 40.0,
     "brand": "Zara",
     "location": "Zara",
     "occasion": "Night Out",
@@ -130,10 +130,10 @@
     "image": "outfit11.jpg",
     "gender": "Women",
     "user_id": 2
-  }, 
+  },
   {
     "outfit_name": "Dress-Jacket",
-    "price": 76.00,
+    "price": 76.0,
     "brand": "Uniqlo",
     "location": "Uniqlo",
     "occasion": "Casual",
@@ -142,10 +142,10 @@
     "image": "outfit12.jpg",
     "gender": "Women",
     "user_id": 3
-  }, 
+  },
   {
     "outfit_name": "Shorts",
-    "price": 50.00,
+    "price": 50.0,
     "brand": "Levi's",
     "location": "Urban Outfiters",
     "occasion": "Casual",
@@ -154,10 +154,10 @@
     "image": "outfit13.jpg",
     "gender": "Women",
     "user_id": 3
-  }, 
+  },
   {
     "outfit_name": "Dress",
-    "price": 65.00,
+    "price": 65.0,
     "brand": "Tommy Hilfiger",
     "location": "Urban Outfiters",
     "occasion": "Casual",
@@ -166,10 +166,10 @@
     "image": "outfit14.jpg",
     "gender": "Women",
     "user_id": 3
-  }, 
+  },
   {
     "outfit_name": "Print T-Shirt",
-    "price": 35.00,
+    "price": 35.0,
     "brand": "4500",
     "location": "Urban Outfiters",
     "occasion": "Casual",
@@ -178,10 +178,10 @@
     "image": "outfit15.jpg",
     "gender": "Women",
     "user_id": 3
-  }, 
+  },
   {
     "outfit_name": "Dress",
-    "price": 75.00,
+    "price": 75.0,
     "brand": "TT212",
     "location": "Urban Outfiters",
     "occasion": "Casual",

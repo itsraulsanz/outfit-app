@@ -17,9 +17,15 @@ router.post("/", withAuth, async (req, res) => {
       notes,
       image,
     } = req.body;
+    console.log("Image", req.files.image);
+    let uploadPath;
     const payload = Object.assign(
       {
         user_id: req.session.user_id,
+      },
+      {
+        image: req.files.image,
+        uploadPath: __dirname + "/api/outfits/images" + image.name,
       },
       {
         likes,
@@ -34,6 +40,10 @@ router.post("/", withAuth, async (req, res) => {
         image,
       }
     );
+    image.mv(uploadPath, function (err) {
+      if (err) return res.status(500).send(err);
+      res.send("File uploaded!");
+    });
     const newOutfits = await Outfits.create(payload);
 
     res.status(200).json(newOutfits);

@@ -89,30 +89,72 @@ router.get("/outfits/:id", async (req, res) => {
   }
 });
 
+
+
 // DASHBOARD - PREVENT ROUTE ACCESS USING WITHAUTH MIDDLEWARE
+
 router.get("/dashboard", withAuth, async (req, res) => {
+
   try {
-    const outfitsData = await Outfits.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ["username"],
-        },
-      ],
-    });
+      const outfitsData = await Outfits.findAll({
+          include: [
+              {
+                  model: User,
+                  attributes: ['username']
+              },
+          ],
+      });
 
-    // serialises outfits data for handlebars template
-    const outfits = outfitsData.map((outfit) => outfit.get({ plain: true }));
+      // serialises outfits data for handlebars template
+      const outfits = outfitsData.map((outfit) => outfit.get({ plain: true }));
 
-    // passes data into homepage handlebars template
-    res.render("dashboard", {
-      outfits,
-      logged_in: req.session.logged_in,
-    });
+      // passes data into homepage handlebars template
+      res.render('dashboard', {
+          outfits,
+          logged_in: req.session.logged_in
+      });
   } catch (err) {
-    res.status(500).json(err);
+      res.status(500).json(err);
   }
 });
+
+
+//   // FILTER ON DASHBOARD BY 'LIKES' ONLY 
+// router.get("/dashboard", withAuth, async (req, res) => {
+ 
+//   try {
+//     const outfitsData = await Outfits.findByPk(req.params.id, {
+//       include: [
+//         {
+//           model: User,
+//           attributes: ["username"]
+//         },
+//       ],
+//     });
+//     // serialises outfits data for handlebars template
+//     const outfits = outfitsData.map((outfit) => outfit.get({ plain: true }));
+//     // passes data into dashboard handlebars template
+    
+//     if (req.params.likes) {
+//       const filteredLikes = outfits.filter(
+//         (outfit) => outfit.likes.toLowerCase() === req.params.likes
+//       );
+//       res.render("dashboard", {
+//         outfits: filteredLikes,
+//         logged_in: req.session.logged_in,
+//       });
+//     } else {
+//       res.render("dashboard", {
+//         logged_in: req.session.logged_in,
+//       });
+//     }
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+
+// });
+
+
 
 // LOGIN - Redirects user to dashboard page if already logged_in
 router.get("/login", (req, res) => {

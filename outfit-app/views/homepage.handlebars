@@ -6,7 +6,7 @@
     <option value="bypricelow">Price low to hight</option>
   </select>
 
-  <select name="select-gender" data-filter="gender">
+  <select name="select-gender" id="select-gender" data-filter="gender">
     <option selected disabled>Gender</option>
     <option value="women">Women</option>
     <option value="men">Men</option>
@@ -55,12 +55,17 @@
             <div>
               <h1>{{outfit_name}}</h1>
               <h2>{{gender}}</h2>
+              <h2>{{price}}</h2>
               <h2>{{occasion}}</h2>
             </div>
 
             <div class="btn-no-style like">
-              <button  class="like" type="submit">
-                <input type="checkbox" id="like" value="false" src="/images/unlike.svg" onMouseOver="this.src='/images/like.svg'" onMouseOut="this.src='/images/unlike.svg'">
+              <button class="like" type="submit">
+                <input
+                  type="checkbox"
+                  id="like"
+                  value="false"
+                />
               </button>
             </div>
 

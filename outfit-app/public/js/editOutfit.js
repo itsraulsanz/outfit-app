@@ -9,8 +9,7 @@ async function editPostFormHandler(event) {
   const colour = document.querySelector("#colour").value.trim();
   const gender = document.querySelector("#gender").value.trim();
   const notes = document.querySelector("#notes").value.trim();
-  // TODO : implement actual file uplaod feature
-  const image = document.querySelector("#image").files[0].name;
+  const image = document.querySelector("#imageLink").value;
   console.log(image);
 
   if (
@@ -51,3 +50,25 @@ async function editPostFormHandler(event) {
 document
   .querySelector(".edit-outfit-form")
   .addEventListener("submit", editPostFormHandler);
+
+
+  const imageNode =  document.querySelector("#image");
+
+  const uploadFile = () => {
+    const file =  document.querySelector("#image").files[0];
+    let formData = new FormData();
+       
+    formData.append("picture", file);
+    fetch('/api/outfits/upload', {
+       method: "POST",
+       body: formData
+     }).then((resp) => resp.json())
+       .then((response) =>{
+        console.log(response);
+        const imgContent =  document.querySelector("#imageLink");
+        imgContent.value = response.resp.secure_url;
+       });
+  }
+  
+  imageNode.addEventListener("change", uploadFile, false);
+  

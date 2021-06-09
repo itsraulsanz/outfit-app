@@ -1,6 +1,24 @@
-const router = require("express").Router();
+const express = require("express");
+const router = express.Router();
+const app = express();
+const fileUpload = require('express-fileupload');
 const { Outfits } = require("../../models");
 const withAuth = require("../../utils/auth");
+
+var cloudinary = require('cloudinary').v2;
+var cloudinaryResult = undefined;
+
+require('dotenv').config();
+
+const DatauriParser = require('datauri/parser');
+const parser = new DatauriParser();
+
+cloudinary.config({ 
+  cloud_name:  process.env.CLOUDINARY_CLOUD_NAME, 
+  api_key:  process.env.CLOUDINARY_API_KEY, 
+  api_secret: process.env.CLOUDINARY_API_SECRET 
+});
+
 
 // POST NEW OUTFIT
 router.post("/", withAuth, async (req, res) => {
@@ -15,8 +33,9 @@ router.post("/", withAuth, async (req, res) => {
       colour,
       gender,
       notes,
-      image,
+      image
     } = req.body;
+    console.log(req.body);
     const payload = Object.assign(
       {
         user_id: req.session.user_id,
@@ -100,5 +119,29 @@ router.delete("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+const uploadToCloudinary = (image) =>  cloudinary.uploader.upload(image, {tags: 'outfit_pictures'});
+
+router.use("/upload", fileUpload({limits: { fileSize: 5 * 1024 * 1024 }}));
+router.post("/upload",  async (req, res) => {
+  const data = req.files.picture.data;
+  const fileName = req.files.picture.name;
+  const fileType = fileName.split('.').pop();
+  console.log(data);
+  const uri = parser.format(fileType, data);
+  try {
+    cloudinaryResult = await uploadToCloudinary(uri.content);
+    const message = {
+      text: 'Ok',
+      resp: cloudinaryResult
+    };
+    res.status(200).json(message);
+  } catch(err) {
+      console.error(err);
+      res.status(500).json({ err: 'Could not upload file' });
+  }  
+});
+
 
 module.exports = router;

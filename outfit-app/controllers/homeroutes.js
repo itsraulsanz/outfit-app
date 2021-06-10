@@ -188,13 +188,13 @@ router.get("/outfits", withAuth, async (req, res) => {
 
     // serialises data specific to user into dashboard handlebars template
     const user = userData.get({ plain: true });
-
     // passes data for one outfit into single-outfit handlebars template
     res.render("addoutfit", {
       ...user,
       logged_in: true,
     });
   } catch (err) {
+    console.log('Error', err);
     res.status(500).json(err);
   }
 });

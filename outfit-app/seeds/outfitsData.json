@@ -7,7 +7,7 @@
     "occasion": "Casual",
     "colour": "Beige",
     "notes": "100% cotton",
-    "image": "outfit1.jpg",
+    "image": "https://res.cloudinary.com/do5244w1d/image/upload/v1623273581/outfit1_c5pv5k.jpg",
     "gender": "Men",
     "user_id": 1
   },
@@ -19,7 +19,7 @@
     "occasion": "Casual",
     "colour": "Green",
     "notes": "Short sleeves",
-    "image": "outfit2.jpg",
+    "image": "https://res.cloudinary.com/do5244w1d/image/upload/v1623273581/outfit2_cchdel.jpg",
     "gender": "Men",
     "user_id": 1
   },
@@ -31,7 +31,7 @@
     "occasion": "Casual",
     "colour": "Navy",
     "notes": "Line fabric",
-    "image": "outfit3.jpg",
+    "image": "https://res.cloudinary.com/do5244w1d/image/upload/v1623273581/outfit3_mu8ptq.jpg",
     "gender": "Men",
     "user_id": 1
   },
@@ -43,7 +43,7 @@
     "occasion": "Casual",
     "colour": "Green",
     "notes": "Short sleeves",
-    "image": "outfit4.jpg",
+    "image": "https://res.cloudinary.com/do5244w1d/image/upload/v1623273582/outfit4_tdyuxm.jpg",
     "gender": "Men",
     "user_id": 1
   },
@@ -55,7 +55,7 @@
     "occasion": "Casual",
     "colour": "Blue",
     "notes": "Comfy",
-    "image": "outfit5.jpg",
+    "image": "https://res.cloudinary.com/do5244w1d/image/upload/v1623273581/outfit5_llaspa.jpg",
     "gender": "Men",
     "user_id": 1
   },
@@ -67,7 +67,7 @@
     "occasion": "Casual",
     "colour": "White",
     "notes": "Relaxed design",
-    "image": "outfit6.jpg",
+    "image": "https://res.cloudinary.com/do5244w1d/image/upload/v1623273581/outfit6_ubi5kh.jpg",
     "gender": "Men",
     "user_id": 1
   },
@@ -79,7 +79,7 @@
     "occasion": "Elegant",
     "colour": "Beige",
     "notes": "Slim fit",
-    "image": "outfit7.jpg",
+    "image": "https://res.cloudinary.com/do5244w1d/image/upload/v1623273582/outfit7_xianuw.jpg",
     "gender": "Men",
     "user_id": 2
   },
@@ -91,7 +91,7 @@
     "occasion": "Casual",
     "colour": "Green",
     "notes": "Wide Leg",
-    "image": "outfit8.jpg",
+    "image": "https://res.cloudinary.com/do5244w1d/image/upload/v1623273582/outfit8_n3puq9.jpg",
     "gender": "Women",
     "user_id": 2
   },
@@ -103,7 +103,7 @@
     "occasion": "Casual",
     "colour": "Beige",
     "notes": "Waterproof",
-    "image": "outfit9.jpg",
+    "image": "https://res.cloudinary.com/do5244w1d/image/upload/v1623273582/outfit9_dzxqtk.jpg",
     "gender": "Women",
     "user_id": 2
   },
@@ -115,7 +115,7 @@
     "occasion": "Night Out",
     "colour": "Black",
     "notes": "Slim fit",
-    "image": "outfit10.jpg",
+    "image": "https://res.cloudinary.com/do5244w1d/image/upload/v1623273580/outfit10_l5s1wu.jpg",
     "gender": "Women",
     "user_id": 2
   },
@@ -127,7 +127,7 @@
     "occasion": "Night Out",
     "colour": "Green",
     "notes": "Lycra",
-    "image": "outfit11.jpg",
+    "image": "https://res.cloudinary.com/do5244w1d/image/upload/v1623273580/outfit11_bx22wx.jpg",
     "gender": "Women",
     "user_id": 2
   },
@@ -139,7 +139,7 @@
     "occasion": "Casual",
     "colour": "Purple",
     "notes": "Cotton",
-    "image": "outfit12.jpg",
+    "image": "https://res.cloudinary.com/do5244w1d/image/upload/v1623273580/outfit12_dyrdtu.jpg",
     "gender": "Women",
     "user_id": 3
   },
@@ -151,7 +151,7 @@
     "occasion": "Casual",
     "colour": "Blue",
     "notes": "Jeans",
-    "image": "outfit13.jpg",
+    "image": "https://res.cloudinary.com/do5244w1d/image/upload/v1623273581/outfit13_abgx16.jpg",
     "gender": "Women",
     "user_id": 3
   },
@@ -163,7 +163,7 @@
     "occasion": "Casual",
     "colour": "White",
     "notes": "Animal print",
-    "image": "outfit14.jpg",
+    "image": "https://res.cloudinary.com/do5244w1d/image/upload/v1623273580/outfit16_cigil1.jpg",
     "gender": "Women",
     "user_id": 3
   },
@@ -175,7 +175,7 @@
     "occasion": "Casual",
     "colour": "White",
     "notes": "Lycra",
-    "image": "outfit15.jpg",
+    "image": "https://res.cloudinary.com/do5244w1d/image/upload/v1623273580/outfit15_otcjzo.jpg",
     "gender": "Women",
     "user_id": 3
   },
@@ -187,7 +187,7 @@
     "occasion": "Casual",
     "colour": "White",
     "notes": "Vest with frontal zip",
-    "image": "outfit16.jpg",
+    "image": "https://res.cloudinary.com/do5244w1d/image/upload/v1623273580/outfit16_cigil1.jpg",
     "gender": "Women",
     "user_id": 3
   }

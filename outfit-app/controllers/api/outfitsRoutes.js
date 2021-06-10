@@ -1,9 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const app = express();
 const fileUpload = require('express-fileupload');
 const { Outfits } = require("../../models");
 const withAuth = require("../../utils/auth");
+const app = express();
+app.use("/upload", fileUpload(), router);
 
 var cloudinary = require('cloudinary').v2;
 var cloudinaryResult = undefined;
@@ -35,13 +36,10 @@ router.post("/", withAuth, async (req, res) => {
       notes,
       image
     } = req.body;
+    console.log(req.body);
     const payload = Object.assign(
       {
         user_id: req.session.user_id,
-      },
-      {
-        image: req.files.image,
-        uploadPath: __dirname + "/api/outfits/images" + image.name,
       },
       {
         likes,
@@ -56,10 +54,6 @@ router.post("/", withAuth, async (req, res) => {
         image,
       }
     );
-    image.mv(uploadPath, function (err) {
-      if (err) return res.status(500).send(err);
-      res.send("File uploaded!");
-    });
     const newOutfits = await Outfits.create(payload);
 
     res.status(200).json(newOutfits);
@@ -71,6 +65,7 @@ router.post("/", withAuth, async (req, res) => {
 
 // UPDATE AN OUTFIT BY ITS ID
 router.put("/:id", withAuth, async (req, res) => {
+  console.log('Here....');
   try {
     const {
       likes,
@@ -102,6 +97,8 @@ router.put("/:id", withAuth, async (req, res) => {
         image,
       }
     );
+
+    console.log(payload);
     const editOutfits = await Outfits.update(payload);
 
     res.status(200).json(editOutfits);
@@ -130,7 +127,6 @@ router.delete("/:id", async (req, res) => {
 
 const uploadToCloudinary = (image) =>  cloudinary.uploader.upload(image, {tags: 'outfit_pictures'});
 
-router.use("/upload", fileUpload({limits: { fileSize: 5 * 1024 * 1024 }}));
 router.post("/upload",  async (req, res) => {
   const data = req.files.picture.data;
   const fileName = req.files.picture.name;

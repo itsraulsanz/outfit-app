@@ -50,9 +50,10 @@ async function editPostFormHandler(event) {
 document
   .querySelector(".edit-outfit-form")
   .addEventListener("submit", editPostFormHandler);
-  const imageNode =  document.querySelector("#image");
 
-  const uploadFile = () => {
+const imageNode =  document.querySelector("#image");
+
+const uploadFile = () => {
     const file =  document.querySelector("#image").files[0];
     let formData = new FormData();
        
@@ -60,13 +61,13 @@ document
     fetch('/api/outfits/upload', {
        method: "POST",
        body: formData
-     }).then((resp) => resp.json())
+    }).then((resp) => resp.json())
        .then((response) =>{
         console.log(response);
         const imgContent =  document.querySelector("#imageLink");
         imgContent.value = response.resp.secure_url;
-       });
-  }
+    });
+}
   
-  imageNode.addEventListener("change", uploadFile, false);
+imageNode.addEventListener("change", uploadFile, false);
  

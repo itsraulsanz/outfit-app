@@ -2,8 +2,14 @@
 const router = require("express").Router();
 const { Outfits, User } = require("../models");
 const withAuth = require("../utils/auth");
+const { expressCspHeader, INLINE, NONE, SELF } = require('express-csp-header');
 
 // DISPLAY ALL OUTFITS ON HOMEPAGE
+router.use(expressCspHeader({
+  directives: {
+      'img-src': [SELF, 'data:', 'res.cloudinary.com']
+  }
+}));
 router.get("/", async (req, res) => {
   console.log("requestquery", req.query);
   // Get all outfits and join with User Data

@@ -5,9 +5,11 @@ async function createOutfitFormHandler(event) {
   const price = document.querySelector("#price").value.trim();
   const brand = document.querySelector("#brand").value.trim();
   const location = document.querySelector("#location").value.trim();
-  const occasion = document.querySelector("#occasion").value.trim();
-  const colour = document.querySelector("#colour").value.trim();
-  const gender = document.querySelector("#gender").value.trim();
+  
+  const occasion = document.querySelector('#occasion option:checked');
+  const colour = document.querySelector('#colour option:checked');
+  const gender = document.querySelector('#gender option:checked');
+
   const notes = document.querySelector("#notes").value.trim();
   const image = document.querySelector("#imageLink").value;
   console.log(image);

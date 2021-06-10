@@ -1,21 +1,20 @@
+
 <div class="wrapper">
   <div>
     <a href="/outfits">Create a new Outfit</a>
   </div>
    <br>
    {{#if logged_in}}
-      <h2>{{user.username}}'s board</h2>      
+      <h2>{{username}}'s board</h2>      
   
   {{/if}}
-    <div>
-     <h3>Your favourite or posted outfits:</h3>
-   </div>
   <br />
   <div>
     <h3>Your favourite or posted outfits:</h3>
   </div>
 
 </div>
+
 
 <div class="grid">
 
@@ -35,16 +34,16 @@
               <input
                 type="checkbox"
                 id="like"
+                   data-id="{{id}}"
                 value="true"
                 src="/images/unlike.svg"
                 onMouseOver="this.src='/images/like.svg'"
                 onMouseOut="this.src='/images/unlike.svg'"
               />
           </div>
+
         </div>
       </section>
     </div>
   {{/each}}
 </div>
-
-<script src="./js/dashboard.js"></script>

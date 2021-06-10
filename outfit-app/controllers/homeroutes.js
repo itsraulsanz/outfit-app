@@ -117,51 +117,24 @@ router.get("/dashboard", withAuth, async (req, res) => {
 
     // serialises outfits data for handlebars template
     const outfits = outfitsData.map((outfit) => outfit.get({ plain: true }));
-
+   
+    // filters outfits by session selection for each outfits selected
+    const filteredOutfits = [];
+    req.session.favouriteOutfits.forEach(outfitId => {
+      const outfit = outfits.filter(({id}) =>  {
+        return id == outfitId
+      })[0];
+      filteredOutfits.push(outfit)
+    })
     // passes data into homepage handlebars template
     res.render("dashboard", {
-      outfits,
+      outfits: filteredOutfits,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
-//   // FILTER ON DASHBOARD BY 'LIKES' ONLY
-// router.get("/dashboard", withAuth, async (req, res) => {
-
-//   try {
-//     const outfitsData = await Outfits.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: User,
-//           attributes: ["username"]
-//         },
-//       ],
-//     });
-//     // serialises outfits data for handlebars template
-//     const outfits = outfitsData.map((outfit) => outfit.get({ plain: true }));
-//     // passes data into dashboard handlebars template
-
-//     if (req.params.likes) {
-//       const filteredLikes = outfits.filter(
-//         (outfit) => outfit.likes.toLowerCase() === req.params.likes
-//       );
-//       res.render("dashboard", {
-//         outfits: filteredLikes,
-//         logged_in: req.session.logged_in,
-//       });
-//     } else {
-//       res.render("dashboard", {
-//         logged_in: req.session.logged_in,
-//       });
-//     }
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-
-// });
 
 // LOGIN - Redirects user to dashboard page if already logged_in
 router.get("/login", (req, res) => {

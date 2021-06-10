@@ -21,6 +21,7 @@ cloudinary.config({
 });
 
 
+
 // POST NEW OUTFIT
 router.post("/", withAuth, async (req, res) => {
   try {
@@ -106,6 +107,32 @@ router.put("/:id", withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+
+// GET LIKES DATA
+
+router.get("/:id/like", withAuth, async (req, res) => {
+  console.log('Here....');
+  try {
+    const outfitId = req.params.id;
+ 
+    const outfitExists = req.session.favouriteOutfits.includes(outfitId)
+
+    if(!outfitExists) {
+      req.session.favouriteOutfits = [...req.session.favouriteOutfits, outfitId ]
+    } 
+ 
+    console.log(req.session.favouriteOutfits, "favourite outfits")
+ 
+    res.status(200).json({
+      message: "successfully favourite outfitId " + outfitId
+    });
+  } catch (err) {
+    console.log(err.message);
+    res.status(400).json(err);
+  }
+});
+
 
 // DELETE AN OUTFIT BY ITS ID
 router.delete("/:id", async (req, res) => {

@@ -171,10 +171,18 @@ router.get("/dashboard", withAuth, async (req, res) => {
 
     // serialises outfits data for handlebars template
     const outfits = outfitsData.map((outfit) => outfit.get({ plain: true }));
-
+   
+    // filters outfits by session selection for each outfits selected
+    const filteredOutfits = [];
+    req.session.favouriteOutfits.forEach(outfitId => {
+      const outfit = outfits.filter(({id}) =>  {
+        return id == outfitId
+      })[0];
+      filteredOutfits.push(outfit)
+    })
     // passes data into homepage handlebars template
     res.render("dashboard", {
-      outfits,
+      outfits: filteredOutfits,
       logged_in: req.session.logged_in,
     });
   } catch (err) {

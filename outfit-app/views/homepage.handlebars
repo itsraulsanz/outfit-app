@@ -2,46 +2,55 @@
 
   <select name="sort-by-price" data-filter="price">
     <option selected disabled>Price</option>
-    <option value="bypricehigh">Price high to low</option>
-    <option value="bypricelow">Price low to hight</option>
+    {{#each selectOptions.price as |price|}}
+      {{#with price}}
+        {{#if selected}}
+          <option value="{{value}}" selected>{{name}}</option>
+        {{else}}
+          <option value="{{value}}">{{name}}</option>
+        {{/if}}
+      {{/with}}
+    {{/each}}
   </select>
 
   <select name="select-gender" id="select-gender" data-filter="gender">
-    <option selected disabled>Gender</option>
-    <option value="women">Women</option>
-    <option value="men">Men</option>
-    <option value="unisex">Unisex</option>
+    <option disabled>Gender</option>
+    {{#each selectOptions.gender as |gender|}}
+      {{#with gender}}
+        {{#if selected}}
+          <option value="{{value}}" selected>{{name}}</option>
+        {{else}}
+          <option value="{{value}}">{{name}}</option>
+        {{/if}}
+      {{/with}}
+    {{/each}}
   </select>
 
-  <select name="select-event" data-filter="event">
-    <option selected disabled>Event</option>
-    <option value="workwear">Workwear</option>
-    <option value="wedding">Wedding</option>
-    <option value="casual">Casual</option>
-    <option value="nightout">Night Out</option>
-    <option value="sportwear">Sportwear</option>
-    <option value="swimwear">Swimwear</option>
-    <option value="other">Other</option>
+  <select name="select-occasion" data-filter="occasion">
+    <option selected disabled>Occasion</option>
+    {{#each selectOptions.occasion as |occasion|}}
+      {{#with occasion}}
+        {{#if selected}}
+          <option value="{{value}}" selected>{{name}}</option>
+        {{else}}
+          <option value="{{value}}">{{name}}</option>
+        {{/if}}
+      {{/with}}
+    {{/each}}
   </select>
 
   <select name="select-colour" data-filter="colour">
     <option selected disabled>Colour</option>
-    <option value="black">Black</option>
-    <option value="blue">Blue</option>
-    <option value="brown">Brown</option>
-    <option value="gold">Gold</option>
-    <option value="green">Green</option>
-    <option value="grey">Grey</option>
-    <option value="multi">Multi</option>
-    <option value="navy">Navy</option>
-    <option value="neutral">Neutral</option>
-    <option value="nocolour">No Colour</option>
-    <option value="orange">Orange</option>
-    <option value="pink">Pink</option>
-    <option value="purple">Purple</option>
-    <option value="red">Red</option>
-    <option value="white">White</option>
-    <option value="yellow">Yellow</option>
+
+    {{#each selectOptions.colour as |colour|}}
+      {{#with colour}}
+        {{#if selected}}
+          <option value="{{value}}" selected>{{name}}</option>
+        {{else}}
+          <option value="{{value}}">{{name}}</option>
+        {{/if}}
+      {{/with}}
+    {{/each}}
   </select>
 </div>
 
@@ -60,6 +69,11 @@
             </div>
 
             <div class="btn-no-style like">
+
+              <button class="like" type="submit">
+                <input type="checkbox" id="like" value="false" />
+              </button>
+
                  <input
                 type="checkbox"
                 data-id="{{id}}"
@@ -69,7 +83,7 @@
                 onMouseOver="this.src='/images/like.svg'"
                 onMouseOut="this.src='/images/unlike.svg'"
               />
-              
+
             </div>
 
           </div>

@@ -125,7 +125,12 @@ router.delete("/:id", async (req, res) => {
 });
 
 
-const uploadToCloudinary = (image) =>  cloudinary.uploader.upload(image, {tags: 'outfit_pictures'});
+const uploadToCloudinary = (image) =>
+ cloudinary.uploader.upload(image,
+   {
+     tags: 'outfit_pictures',
+     eager: [{width: 395, height: 495}]
+   });
 
 router.post("/upload",  async (req, res) => {
   const data = req.files.picture.data;

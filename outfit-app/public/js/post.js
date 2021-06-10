@@ -65,7 +65,7 @@ const uploadFile = () => {
      .then((response) =>{
       console.log(response);
       const imgContent =  document.querySelector("#imageLink");
-      imgContent.value = response.resp.secure_url;
+      imgContent.value = response.resp.eager[0].secure_url;
      });
 }
 

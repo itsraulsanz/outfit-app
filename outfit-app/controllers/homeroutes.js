@@ -32,8 +32,7 @@ router.get("/", async (req, res) => {
     if (req.query.gender) {
       const filteredOutfits = outfits.filter(
         (outfit) =>
-          outfit.gender.toLowerCase() === req.query.gender &&
-          outfit.event.toLowerCase() === req.query.event
+          outfit.gender.toLowerCase() === req.query.gender
       );
       console.log("filteredOutfits", filteredOutfits);
       res.render("homepage", {

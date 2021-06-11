@@ -172,7 +172,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
     // serialises outfits data for handlebars template
     const outfits = outfitsData.map((outfit) => outfit.get({ plain: true }));
    
-    // filters outfits by session selection for each outfits selected
+    // FILTERED OUTFITS = likes - filters outfits by session selection for each outfits selected e.g just liked outfits
     const filteredOutfits = [];
     req.session.favouriteOutfits.forEach(outfitId => {
       const outfit = outfits.filter(({id}) =>  {

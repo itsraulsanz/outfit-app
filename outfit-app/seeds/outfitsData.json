@@ -25,7 +25,7 @@
   },
   {
     "outfit_name": "Shirt",
-    "price": 34.90,
+    "price": 34.9,
     "brand": "Zara",
     "location": "Zara",
     "occasion": "Casual",
@@ -85,7 +85,7 @@
   },
   {
     "outfit_name": "Wide Trousers",
-    "price": 40.00,
+    "price": 40.0,
     "brand": "Mango",
     "location": "Mango",
     "occasion": "Casual",
@@ -109,7 +109,7 @@
   },
   {
     "outfit_name": "Leather Trousers",
-    "price": 50.60,
+    "price": 50.6,
     "brand": "Monky",
     "location": "Monky",
     "occasion": "Night Out",
@@ -121,7 +121,7 @@
   },
   {
     "outfit_name": "Print Dress",
-    "price": 40.00,
+    "price": 40.0,
     "brand": "Zara",
     "location": "Zara",
     "occasion": "Night Out",
@@ -133,7 +133,7 @@
   },
   {
     "outfit_name": "Dress-Jacket",
-    "price": 76.00,
+    "price": 76.0,
     "brand": "Uniqlo",
     "location": "Uniqlo",
     "occasion": "Casual",
@@ -145,7 +145,7 @@
   },
   {
     "outfit_name": "Shorts",
-    "price": 50.00,
+    "price": 50.0,
     "brand": "Levi's",
     "location": "Urban Outfiters",
     "occasion": "Casual",
@@ -157,7 +157,7 @@
   },
   {
     "outfit_name": "Dress",
-    "price": 65.00,
+    "price": 65.0,
     "brand": "Tommy Hilfiger",
     "location": "Urban Outfiters",
     "occasion": "Casual",
@@ -169,7 +169,7 @@
   },
   {
     "outfit_name": "Print T-Shirt",
-    "price": 35.00,
+    "price": 35.0,
     "brand": "4500",
     "location": "Urban Outfiters",
     "occasion": "Casual",
@@ -181,7 +181,7 @@
   },
   {
     "outfit_name": "Dress",
-    "price": 75.00,
+    "price": 75.0,
     "brand": "TT212",
     "location": "Urban Outfiters",
     "occasion": "Casual",
@@ -193,7 +193,7 @@
   },
   {
     "outfit_name": "T-shirt",
-    "price": 75.00,
+    "price": 75.0,
     "brand": "Foo Fighters",
     "location": "Urban Outfiters",
     "occasion": "Night Out",
@@ -205,7 +205,7 @@
   },
   {
     "outfit_name": "Jumper",
-    "price": 82.00,
+    "price": 82.0,
     "brand": "Foo Fighters",
     "location": "Urban Outfiters",
     "occasion": "Sportwear",
@@ -217,7 +217,7 @@
   },
   {
     "outfit_name": "Trousers",
-    "price": 35.00,
+    "price": 35.0,
     "brand": "Tribute",
     "location": "Next",
     "occasion": "Wedding",
@@ -229,7 +229,7 @@
   },
   {
     "outfit_name": "Shorts",
-    "price": 33.00,
+    "price": 33.0,
     "brand": "River Island",
     "location": "River Island",
     "occasion": "Night Out",
@@ -241,7 +241,7 @@
   },
   {
     "outfit_name": "Total look",
-    "price": 95.30,
+    "price": 95.3,
     "brand": "River Island",
     "location": "River Island",
     "occasion": "Night Out",
@@ -253,7 +253,7 @@
   },
   {
     "outfit_name": "Total ourtfit",
-    "price": 95.30,
+    "price": 95.3,
     "brand": "Zara",
     "location": "Zara",
     "occasion": "Workwear",
@@ -265,7 +265,7 @@
   },
   {
     "outfit_name": "Total outfit",
-    "price": 87.70,
+    "price": 87.7,
     "brand": "River Island",
     "location": "River Island",
     "occasion": "Workwear",
@@ -277,7 +277,7 @@
   },
   {
     "outfit_name": "Casual outfit",
-    "price": 87.70,
+    "price": 87.7,
     "brand": "Carhartt",
     "location": "Carhartt",
     "occasion": "Workwear",
@@ -289,7 +289,7 @@
   },
   {
     "outfit_name": "Pink Dress",
-    "price": 37.70,
+    "price": 37.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Night Out",
@@ -301,7 +301,7 @@
   },
   {
     "outfit_name": "Perfect summer",
-    "price": 97.70,
+    "price": 97.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Workwear",
@@ -313,7 +313,7 @@
   },
   {
     "outfit_name": "Summer vibes",
-    "price": 57.70,
+    "price": 57.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Workwear",
@@ -325,7 +325,7 @@
   },
   {
     "outfit_name": "Summer sunset",
-    "price": 77.70,
+    "price": 77.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Night Out",
@@ -337,7 +337,7 @@
   },
   {
     "outfit_name": "Picnic",
-    "price": 37.70,
+    "price": 37.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Other",
@@ -349,7 +349,7 @@
   },
   {
     "outfit_name": "Perfect look",
-    "price": 97.70,
+    "price": 97.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Wedding",
@@ -361,7 +361,7 @@
   },
   {
     "outfit_name": "Perfect look",
-    "price": 67.70,
+    "price": 67.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Other",
@@ -373,7 +373,7 @@
   },
   {
     "outfit_name": "Perfect vest",
-    "price": 57.70,
+    "price": 57.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Wedding",
@@ -385,7 +385,7 @@
   },
   {
     "outfit_name": "Total look",
-    "price": 57.70,
+    "price": 57.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Other",
@@ -397,7 +397,7 @@
   },
   {
     "outfit_name": "Total look",
-    "price": 76.20,
+    "price": 76.2,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Other",
@@ -409,7 +409,7 @@
   },
   {
     "outfit_name": "Total look",
-    "price": 57.70,
+    "price": 57.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Other",
@@ -421,7 +421,7 @@
   },
   {
     "outfit_name": "Summer look",
-    "price": 87.70,
+    "price": 87.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Other",
@@ -433,7 +433,7 @@
   },
   {
     "outfit_name": "Picnic look",
-    "price": 87.70,
+    "price": 87.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Other",
@@ -445,7 +445,7 @@
   },
   {
     "outfit_name": "Dress",
-    "price": 57.70,
+    "price": 57.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Other",
@@ -457,7 +457,7 @@
   },
   {
     "outfit_name": "Suit",
-    "price": 97.70,
+    "price": 97.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Wedding",
@@ -469,7 +469,7 @@
   },
   {
     "outfit_name": "Dress",
-    "price": 97.70,
+    "price": 97.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Wedding",
@@ -481,7 +481,7 @@
   },
   {
     "outfit_name": "Nice outfit",
-    "price": 97.70,
+    "price": 97.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Other",
@@ -493,7 +493,7 @@
   },
   {
     "outfit_name": "Cool outfit",
-    "price": 57.70,
+    "price": 57.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Other",
@@ -505,7 +505,7 @@
   },
   {
     "outfit_name": "Cool outfit",
-    "price": 57.70,
+    "price": 57.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Other",
@@ -517,7 +517,7 @@
   },
   {
     "outfit_name": "Beach outfit",
-    "price": 57.70,
+    "price": 57.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Swimwear",
@@ -529,7 +529,7 @@
   },
   {
     "outfit_name": "Nite outfit",
-    "price": 57.70,
+    "price": 57.7,
     "brand": "H&M",
     "location": "H&M",
     "occasion": "Other",

@@ -3,6 +3,12 @@ const router = require("express").Router();
 const { Op } = require("sequelize");
 const { Outfits, User } = require("../models");
 const withAuth = require("../utils/auth");
+const { expressCspHeader, INLINE, NONE, SELF } = require('express-csp-header');
+router.use(expressCspHeader({
+  directives: {
+      'img-src': [SELF, 'data:', 'res.cloudinary.com']
+  }
+}));
 
 const selectOptions = {
   price: [

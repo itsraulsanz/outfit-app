@@ -55,7 +55,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
   align-items: stretch;
   align-content: stretch;
   flex-grow: 1;
@@ -191,15 +190,6 @@ button {
   margin: 0;
 }
 
-/* .single-outfit {
-  display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	align-content: stretch;
-} */
-
 .single-outfit .content {
   display: flex;
   flex-direction: row;
@@ -324,14 +314,14 @@ button {
   margin: 0;
   margin-bottom: 4px;
   text-align: left;
-  font-size: 1.6rem;
+  font-size: 1.1rem;
 }
 
 .card-body-simple h2 {
   margin: 0;
   margin-bottom: 4px;
   text-align: left;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 .card-body-simple h3 {
@@ -342,9 +332,9 @@ button {
   font-size: 1.1rem;
 }
 
-/* .card-body .details {
-  border-bottom: solid 1px;
-} */
+.info {
+  width: 80%;
+}
 
 .posts-list {
   text-align: center;
@@ -479,6 +469,20 @@ input:checked[type="checkbox"]:after {
   box-sizing: border-box;
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--light);
+  text-align: center;
+}
+
+.footer h6 {
+  padding: 0;
+  margin: 15px;
+}
 
 /* On screens that are 992px wide or less, go from four columns to two columns */
 @media screen and (max-width: 992px) {

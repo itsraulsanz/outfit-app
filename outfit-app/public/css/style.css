@@ -54,7 +54,7 @@ header a {
 main {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: stretch;
   align-content: stretch;
@@ -101,6 +101,10 @@ nav button:hover {
   max-height: 23vh;
   align-self: center;
   margin: 30px 0 15px 0;
+}
+
+.selectors {
+  align-self: center;
 }
 
 select {

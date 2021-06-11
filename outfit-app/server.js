@@ -12,7 +12,6 @@ const helpers = require("./utils/helpers");
 
 const app = express();
 
-
 const PORT = process.env.PORT || 3001;
 
 const sess = {
@@ -27,7 +26,6 @@ const sess = {
 
 app.use(session(sess));
 app.use(helmet());
-
 
 const hbs = exphbs.create({ helpers });
 

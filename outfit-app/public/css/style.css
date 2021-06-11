@@ -229,7 +229,7 @@ button {
 }
 
 .card:hover {
-  transition: transform .2s;  
+  transition: transform 0.2s;
   color: var(--light);
   background-color: var(--primary);
   border: 1px solid var(--light);
@@ -303,11 +303,11 @@ button {
   text-align: left;
   border: solid 1px var(--primary);
   display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: stretch;
-	align-content: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
 }
 
 .card-body-simple h1 {
@@ -446,13 +446,13 @@ input[type="checkbox"]:checked,
 input:checked[type="checkbox"]:before,
 input:checked[type="checkbox"]:after {
   background-color: var(--secondary);
-}  
+}
 
 .new-outfit-section {
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 70px;
-    padding-top: 0;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 70px;
+  padding-top: 0;
 }
 
 .form-group {

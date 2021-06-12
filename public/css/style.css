@@ -54,8 +54,7 @@ header a {
 main {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: stretch;
   align-content: stretch;
   flex-grow: 1;
@@ -101,6 +100,10 @@ nav button:hover {
   max-height: 23vh;
   align-self: center;
   margin: 30px 0 15px 0;
+}
+
+.selectors {
+  align-self: center;
 }
 
 select {
@@ -187,15 +190,6 @@ button {
   margin: 0;
 }
 
-/* .single-outfit {
-  display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	align-content: stretch;
-} */
-
 .single-outfit .content {
   display: flex;
   flex-direction: row;
@@ -235,7 +229,7 @@ button {
 }
 
 .card:hover {
-  transition: transform .2s;  
+  transition: transform 0.2s;
   color: var(--light);
   background-color: var(--primary);
   border: 1px solid var(--light);
@@ -309,25 +303,25 @@ button {
   text-align: left;
   border: solid 1px var(--primary);
   display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: stretch;
-	align-content: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
 }
 
 .card-body-simple h1 {
   margin: 0;
   margin-bottom: 4px;
   text-align: left;
-  font-size: 1.6rem;
+  font-size: 1.1rem;
 }
 
 .card-body-simple h2 {
   margin: 0;
   margin-bottom: 4px;
   text-align: left;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 .card-body-simple h3 {
@@ -338,9 +332,9 @@ button {
   font-size: 1.1rem;
 }
 
-/* .card-body .details {
-  border-bottom: solid 1px;
-} */
+.info {
+  width: 80%;
+}
 
 .posts-list {
   text-align: center;
@@ -452,13 +446,13 @@ input[type="checkbox"]:checked,
 input:checked[type="checkbox"]:before,
 input:checked[type="checkbox"]:after {
   background-color: var(--secondary);
-}  
+}
 
 .new-outfit-section {
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 70px;
-    padding-top: 0;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 70px;
+  padding-top: 0;
 }
 
 .form-group {
@@ -475,6 +469,20 @@ input:checked[type="checkbox"]:after {
   box-sizing: border-box;
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--light);
+  text-align: center;
+}
+
+.footer h6 {
+  padding: 0;
+  margin: 15px;
+}
 
 /* On screens that are 992px wide or less, go from four columns to two columns */
 @media screen and (max-width: 992px) {

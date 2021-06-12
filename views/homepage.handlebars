@@ -61,7 +61,7 @@
         <a href="/outfits/{{id}}">
           <img class="outfit-image" src="{{image}}" alt="Outfit" />
           <div class="card-body-simple">
-            <div>
+            <div class="info">
               <h1>{{outfit_name}}</h1>
               <h2>{{gender}}</h2>
               <h2>{{price}}</h2>
@@ -70,19 +70,7 @@
 
             <div class="btn-no-style like">
 
-              <button class="like" type="submit">
-                <input type="checkbox" id="like" value="false" />
-              </button>
-
-                 <input
-                type="checkbox"
-                data-id="{{id}}"
-                id="like"
-                value="true"
-                src="/images/unlike.svg"
-                onMouseOver="this.src='/images/like.svg'"
-                onMouseOut="this.src='/images/unlike.svg'"
-              />
+              <input type="checkbox" data-id="{{id}}" id="like" value="true" />
 
             </div>
 

@@ -3,16 +3,18 @@ const router = require("express").Router();
 const { Op } = require("sequelize");
 const { Outfits, User } = require("../models");
 const withAuth = require("../utils/auth");
-const { expressCspHeader, INLINE, NONE, SELF } = require('express-csp-header');
-router.use(expressCspHeader({
-  directives: {
-      'img-src': [SELF, 'data:', 'res.cloudinary.com']
-  }
-}));
+const { expressCspHeader, INLINE, NONE, SELF } = require("express-csp-header");
+router.use(
+  expressCspHeader({
+    directives: {
+      "img-src": [SELF, "data:", "res.cloudinary.com"],
+    },
+  })
+);
 
 const selectOptions = {
   price: [
-    { name: "Price low to hight", value: "ASC" },    
+    { name: "Price low to hight", value: "ASC" },
     { name: "Price high to low", value: "DESC" },
   ],
   gender: [
@@ -82,7 +84,7 @@ router.get("/", async (req, res) => {
 
     // serialises outfits data for handlebars template
     const outfits = outfitsData.map((outfit) => outfit.get({ plain: true }));
-    
+
     if (req.query.price) {
       for (let index = 0; index < selectOptions.price.length; index++) {
         if (req.query.price === selectOptions.price[index].value) {
@@ -177,15 +179,15 @@ router.get("/dashboard", withAuth, async (req, res) => {
 
     // serialises outfits data for handlebars template
     const outfits = outfitsData.map((outfit) => outfit.get({ plain: true }));
-   
+
     // FILTERED OUTFITS = likes - filters outfits by session selection for each outfits selected e.g just liked outfits
     const filteredOutfits = [];
-    req.session.favouriteOutfits.forEach(outfitId => {
-      const outfit = outfits.filter(({id}) =>  {
-        return id == outfitId
+    req.session.favouriteOutfits.forEach((outfitId) => {
+      const outfit = outfits.filter(({ id }) => {
+        return id == outfitId;
       })[0];
-      filteredOutfits.push(outfit)
-    })
+      filteredOutfits.push(outfit);
+    });
     // passes data into homepage handlebars template
     res.render("dashboard", {
       outfits: filteredOutfits,

@@ -2,11 +2,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="img-src  https://res.cloudinary.com 'self'">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="img-src  https://res.cloudinary.com 'self'"
+    />
     <title>Pose-it</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    {{! <link rel="stylesheet" href="/netdna.bootstrapcdn.com/bootstrap/5.0/css/bootstrap.min.css"> }}
-
   </head>
 
   <body>
@@ -33,6 +34,10 @@
     <main>
       {{{body}}}
     </main>
+
+    <div class="footer">
+      <h6>Copyright © 2021 Pose-it.</h6>
+    </div>
 
     <!-- Render script for logged in users only -->
     {{#if logged_in}}

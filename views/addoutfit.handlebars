@@ -1,0 +1,103 @@
+<section class="content new-outfit-section">
+
+  <h1>Create a New Pose:</h1>
+
+  <form
+    ref="uploadForm"
+    id="uploadForm"
+    action="/"
+    method="post"
+    encType="multipart/form-data"
+    class="form new-outfit-form"
+  >
+    <div class="form-group">
+      <label for="outfit-name">Outfit name:</label>
+      <input
+        class="form-input"
+        type="text"
+        id="outfit-name"
+        name="outfit-name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input class="form-input" type="number" id="price" name="price" />
+    </div>
+    <div class="form-group">
+      <label for="brand">Brand:</label>
+      <input class="form-input" type="text" id="brand" name="brand" />
+    </div>
+    <div class="form-group">
+      <label for="location">Where did you see it?:</label>
+      <input class="form-input" type="text" id="location" name="location" />
+    </div>
+
+    <div class="form-group">
+      <label for="occasion">Occasion:</label>
+      <select name="occasion" id="occasion" data-filter="occasion">
+        <option value="Casual" selected="selected">Casual</option>
+        <option value="Night Out">Night Out</option>
+        <option value="Sportwear">Sportwear</option>
+        <option value="Swimwear">Swimwear</option>
+        <option value="Wedding">Wedding</option>
+        <option value="Workwear">Workwear</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="Colour">Colour:</label>
+      <select name="colour" id="colour" data-filter="colour">
+        <option value="Black">Black</option>
+        <option value="Blue">Blue</option>
+        <option value="Brown">Brown</option>
+        <option value="Gold">Gold</option>
+        <option value="Green">Green</option>
+        <option value="Grey">Grey</option>
+        <option value="Multi">Multi</option>
+        <option value="Navy">Navy</option>
+        <option value="Neutral">Neutral</option>
+        <option value="No Colour">No Colour</option>
+        <option value="Orange">Orange</option>
+        <option value="Pink">Pink</option>
+        <option value="Purple">Purple</option>
+        <option value="Red">Red</option>
+        <option value="White">White</option>
+        <option value="Yellow">Yellow</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" data-filter="gender">
+        <option value="Men">Men</option>
+        <option value="Women">Women</option>
+        <option value="Unisex">Unisex</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="notes">Notes:</label>
+      <input class="form-input" type="text" id="notes" name="notes" />
+    </div>
+
+    <div class="form-group">
+      <label for="image">Upload Your Image:</label>
+      <input
+        class="form-input"
+        type="file"
+        id="image"
+        name="image_name"
+        accept=".jpg, .png"
+      />
+    </div>
+    <input class="form-input" type="hidden" id="imageLink" name="image-link" />
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Create Outfit</button>
+    </div>
+  </form>
+
+</section>
+
+<script src="js/post.js"></script>

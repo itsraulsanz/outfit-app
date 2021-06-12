@@ -1,0 +1,85 @@
+<div class="selectors">
+
+  <select name="sort-by-price" data-filter="price">
+    <option selected disabled>Price</option>
+    {{#each selectOptions.price as |price|}}
+      {{#with price}}
+        {{#if selected}}
+          <option value="{{value}}" selected>{{name}}</option>
+        {{else}}
+          <option value="{{value}}">{{name}}</option>
+        {{/if}}
+      {{/with}}
+    {{/each}}
+  </select>
+
+  <select name="select-gender" id="select-gender" data-filter="gender">
+    <option selected disabled>Gender</option>
+    {{#each selectOptions.gender as |gender|}}
+      {{#with gender}}
+        {{#if selected}}
+          <option value="{{value}}" selected>{{name}}</option>
+        {{else}}
+          <option value="{{value}}">{{name}}</option>
+        {{/if}}
+      {{/with}}
+    {{/each}}
+  </select>
+
+  <select name="select-occasion" data-filter="occasion">
+    <option selected disabled>Occasion</option>
+    {{#each selectOptions.occasion as |occasion|}}
+      {{#with occasion}}
+        {{#if selected}}
+          <option value="{{value}}" selected>{{name}}</option>
+        {{else}}
+          <option value="{{value}}">{{name}}</option>
+        {{/if}}
+      {{/with}}
+    {{/each}}
+  </select>
+
+  <select name="select-colour" data-filter="colour">
+    <option selected disabled>Colour</option>
+
+    {{#each selectOptions.colour as |colour|}}
+      {{#with colour}}
+        {{#if selected}}
+          <option value="{{value}}" selected>{{name}}</option>
+        {{else}}
+          <option value="{{value}}">{{name}}</option>
+        {{/if}}
+      {{/with}}
+    {{/each}}
+  </select>
+</div>
+
+<div class="grid">
+  {{#each outfits as |outfit|}}
+    <div class="content">
+      <section class="card">
+        <a href="/outfits/{{id}}">
+          <img class="outfit-image" src="{{image}}" alt="Outfit" />
+          <div class="card-body-simple">
+            <div class="info">
+              <h1>{{outfit_name}}</h1>
+              <h2>{{gender}}</h2>
+              <h2>{{price}}</h2>
+              <h2>{{occasion}}</h2>
+            </div>
+
+            <div class="btn-no-style like">
+
+              <input type="checkbox" data-id="{{id}}" id="like" value="true" />
+
+            </div>
+
+          </div>
+        </a>
+      </section>
+    </div>
+  {{/each}}
+</div>
+
+<script src="/js/homepage.js"></script>
+<script src="js/likes.js"></script>

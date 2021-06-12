@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="img-src  https://res.cloudinary.com 'self'"
+    />
+    <title>Pose-it</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="/"><img
+          class="logo"
+          src="/images/pose-it-logo.svg"
+          alt="Post-it logo"
+        /></a>
+
+      <nav>
+        {{#if logged_in}}
+          <a href="/outfits">Add Outfit</a>
+          <a href="/dashboard">Dashboard</a>
+          <button class="no-button" id="logout">Logout</button>
+
+        {{else}}
+          <a href="/login">Login</a>
+          <a href="/signup">Sign Up</a>
+        {{/if}}
+      </nav>
+    </header>
+
+    <main>
+      {{{body}}}
+    </main>
+
+
+
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
+  </body>    
+  
+</html>

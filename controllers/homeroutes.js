@@ -14,7 +14,7 @@ router.use(
 
 const selectOptions = {
   price: [
-    { name: "Price low to hight", value: "ASC" },
+    { name: "Price low to high", value: "ASC" },
     { name: "Price high to low", value: "DESC" },
   ],
   gender: [

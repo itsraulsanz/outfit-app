@@ -163,7 +163,7 @@ router.get("/outfits/:id", async (req, res) => {
 
 // DASHBOARD - PREVENT ROUTE ACCESS USING WITHAUTH MIDDLEWARE
 router.get("/dashboard", withAuth, async (req, res) => {
-  try {
+  try {  
     const outfitsData = await Outfits.findAll({
       include: [
         {
@@ -176,8 +176,12 @@ router.get("/dashboard", withAuth, async (req, res) => {
     // serialises outfits data for handlebars template
     const outfits = outfitsData.map((outfit) => outfit.get({ plain: true }));
 
+
     // FILTERED OUTFITS = likes - filters outfits by session selection for each outfits selected e.g just liked outfits
     const filteredOutfits = [];
+    if (!req.session.favouriteOutfits) {
+      req.session.favouriteOutfits = [];
+    }
     req.session.favouriteOutfits.forEach((outfitId) => {
       const outfit = outfits.filter(({ id }) => {
         return id == outfitId;

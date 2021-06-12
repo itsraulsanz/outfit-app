@@ -12,10 +12,12 @@ router.post("/signup", async (req, res) => {
       req.session.username = userData.username;
       req.session.email = userData.email;
       req.session.logged_in = true;
+      req.session.favouriteOutfits = [];
 
       res.status(200).json(userData);
     });
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });

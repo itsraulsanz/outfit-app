@@ -21,16 +21,14 @@
             <p><span>Gender: </span>{{gender}}</p>
             <p><span>Occasion: </span>{{occasion}}</p>
             <p><span>Colour: </span>{{colour}}</p>
-            <p><span>Post date: </span>{{date}}</p>
+            <p><span>Post date: </span>{{date_created}}</p>
           </div>
         </div>
       </div>
     </section>
 
   </div>
-
-</div>
-{{#if logged_in}}
+  {{#if logged_in}}
   <div class="wrapper">
     <button
       data-id="{{outfit.id}}"
@@ -39,5 +37,6 @@
     >Delete the Outfit</button>
   </div>
 {{/if}}
+</div>
 
 <script src="/js/deleteOutfit.js"></script>

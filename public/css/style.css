@@ -402,6 +402,7 @@ button {
   font-size: 100%;
   transition: color 0.1s;
   margin-left: 0px;
+  margin-bottom: 30px;
 }
 
 .new-outfit-form {
@@ -467,21 +468,6 @@ input:checked[type="checkbox"]:after {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--primary);
-  color: var(--light);
-  text-align: center;
-}
-
-.footer h6 {
-  padding: 0;
-  margin: 15px;
 }
 
 /* On screens that are 992px wide or less, go from four columns to two columns */

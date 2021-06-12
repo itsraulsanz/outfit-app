@@ -31,9 +31,7 @@ function insertParam(key, value) {
   if (i >= kvp.length) {
     kvp[kvp.length] = [key, value].join("=");
   }
-  console.log(kvp);
   const filteredKvp = kvp.filter((el) => el.length > 0);
-  console.log("filter", filteredKvp);
   // can return this or...
   let params = filteredKvp.join("&");
 

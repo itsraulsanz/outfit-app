@@ -10,7 +10,6 @@ async function editPostFormHandler(event) {
   const gender = document.querySelector("#gender").value.trim();
   const notes = document.querySelector("#notes").value.trim();
   const image = document.querySelector("#imageLink").value;
-  console.log(image);
 
   if (
     outfitName &&

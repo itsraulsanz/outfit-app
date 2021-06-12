@@ -34,8 +34,8 @@ router.post("/", withAuth, async (req, res) => {
       gender,
       notes,
       image,
+      date_created,
     } = req.body;
-    console.log(req.body);
     const payload = Object.assign(
       {
         user_id: req.session.user_id,
@@ -51,20 +51,19 @@ router.post("/", withAuth, async (req, res) => {
         gender,
         notes,
         image,
+        date_created,
       }
     );
     const newOutfits = await Outfits.create(payload);
 
     res.status(200).json(newOutfits);
   } catch (err) {
-    console.log(err.message);
     res.status(400).json(err);
   }
 });
 
 // UPDATE AN OUTFIT BY ITS ID
 router.put("/:id", withAuth, async (req, res) => {
-  console.log("Here....");
   try {
     const {
       likes,
@@ -107,9 +106,7 @@ router.put("/:id", withAuth, async (req, res) => {
 });
 
 // GET LIKES DATA
-
 router.get("/:id/like", withAuth, async (req, res) => {
-  console.log("Here....");
   try {
     const outfitId = req.params.id;
 
@@ -121,8 +118,6 @@ router.get("/:id/like", withAuth, async (req, res) => {
         outfitId,
       ];
     }
-
-    console.log(req.session.favouriteOutfits, "favourite outfits");
 
     res.status(200).json({
       message: "successfully favourite outfitId " + outfitId,
@@ -160,7 +155,6 @@ router.post("/upload", async (req, res) => {
   const data = req.files.picture.data;
   const fileName = req.files.picture.name;
   const fileType = fileName.split(".").pop();
-  console.log(data);
   const uri = parser.format(fileType, data);
   try {
     cloudinaryResult = await uploadToCloudinary(uri.content);

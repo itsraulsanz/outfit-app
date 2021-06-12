@@ -14,7 +14,7 @@ router.use(
 
 const selectOptions = {
   price: [
-    { name: "Price low to hight", value: "ASC" },
+    { name: "Price low to high", value: "ASC" },
     { name: "Price high to low", value: "DESC" },
   ],
   gender: [
@@ -64,7 +64,6 @@ function queryFilters(filters) {
 
 // DISPLAY ALL OUTFITS ON HOMEPAGE
 router.get("/", async (req, res) => {
-  console.log("requestquery", req.query);
   // Get all outfits and join with User Data
   try {
     const { price, ...filters } = req.query;
@@ -124,9 +123,6 @@ router.get("/", async (req, res) => {
         }
       }
     }
-
-    console.log("req.query.gender", req.query.gender);
-    console.log(JSON.stringify(selectOptions));
 
     res.render("homepage", {
       outfits,

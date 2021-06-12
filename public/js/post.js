@@ -17,10 +17,6 @@ async function createOutfitFormHandler(event) {
 
   const notes = document.querySelector("#notes").value.trim();
   const image = document.querySelector("#imageLink").value;
-  console.log(image);
-  console.log("occasion", occasion);
-  console.log("colour", colour);
-  console.log("gender", gender);
 
   if (
     outfitName &&

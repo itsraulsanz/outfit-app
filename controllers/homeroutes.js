@@ -179,6 +179,9 @@ router.get("/dashboard", withAuth, async (req, res) => {
 
     // FILTERED OUTFITS = likes - filters outfits by session selection for each outfits selected e.g just liked outfits
     const filteredOutfits = [];
+    if (!req.session.favouriteOutfits) {
+      req.session.favouriteOutfits = [];
+    }
     req.session.favouriteOutfits.forEach((outfitId) => {
       const outfit = outfits.filter(({ id }) => {
         return id == outfitId;

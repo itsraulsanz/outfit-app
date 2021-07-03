@@ -87,7 +87,7 @@ All routes tested in Insomnia during development process. Further testing with j
 For any further questions, please contact GitHub users:
 [Thom Williams](https://www.github.com/ThomWilliams/)
 [Raul Sanz](https://github.com/itsraulsanz)
-[Temi Lanre-Adewumi](https://github.com/TemyTemy)
+[Temi](https://github.com/TemyTemy)
 
 Or for direct enquiries please email the follower developer address:
 thomwilliams1990@gmail.com

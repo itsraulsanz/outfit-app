@@ -98,9 +98,9 @@ luarznas@gmail.com
 
 ## Screenshot
 
-![Screenshot of Pose-It App Home](/outfit-app/outfit-app/public/images/home.png)
-![Screenshot of Pose-It App Favourites](/outfit-app/outfit-app/public/images/favourites.png)
-![Screenshot of Pose-It App SignUp](/outfit-app/outfit-app/public/images/signup.png)
+![Screenshot of Pose-It App Home](./public/images/home.png)
+![Screenshot of Pose-It App Favourites](./public/images/favourites.png)
+![Screenshot of Pose-It App SignUp](./public/images/signup.png)
 
 ## Links
 

@@ -1,8 +1,10 @@
-# Group 4: Project 2:
-
 # Pose-It Fashion App
 
 ![Github license](https://img.shields.io/badge/license-MIT-blue.svg)
+
+## Deployment / Links
+
+- Heroku: [Heroku](https://pose-it-app.herokuapp.com/)
 
 ## Table of Contents
 
@@ -12,6 +14,8 @@
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
+- [Links](#links)
+- [Screenshots](#screenshots)
 - [License](#license)
 
 ## Description
@@ -85,20 +89,20 @@ All routes tested in Insomnia during development process. Further testing with j
 ## Questions
 
 For any further questions, please contact GitHub users:
-[Thom Williams](https://www.github.com/ThomWilliams/)
 [Raul Sanz](https://github.com/itsraulsanz)
+[Thom Williams](https://www.github.com/ThomWilliams/)
 [Temi Lanre-Adewumi](https://github.com/TemyTemy)
 
 Or for direct enquiries please email the follower developer address:
-thomwilliams1990@gmail.com
+luarznas@gmail.com
 
 ## Screenshot
 
-![Screenshot of Pose-It App](/outfit-app/outfit-app/public/images/pose-it.png)
+![Screenshot of Pose-It App Home](/outfit-app/outfit-app/public/images/home.png)
+![Screenshot of Pose-It App Favourites](/outfit-app/outfit-app/public/images/favourites.png)
+![Screenshot of Pose-It App SignUp](/outfit-app/outfit-app/public/images/signup.png)
 
-## Deployment / Links
-
-- Heroku: [Heroku](https://pose-it-app.herokuapp.com/)
+## Links
 
 - Project Repository: [GitHub](https://github.com/itsraulsanz/outfit-app)
 
